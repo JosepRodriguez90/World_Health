@@ -107,15 +107,15 @@
 			this.component = false;
 		this.isInline = !this.component && this.element.is('div');
 
-		this.picker = $(DPGlobal.template);
+		this.picker = $(DPGlobal.);
 
-		// Checking templates and inserting
-		if (this._check_template(this.o.templates.leftArrow)) {
-			this.picker.find('.prev').html(this.o.templates.leftArrow);
+		// Checking s and inserting
+		if (this._check_(this.o.s.leftArrow)) {
+			this.picker.find('.prev').html(this.o.s.leftArrow);
 		}
 
-		if (this._check_template(this.o.templates.rightArrow)) {
-			this.picker.find('.next').html(this.o.templates.rightArrow);
+		if (this._check_(this.o.s.rightArrow)) {
+			this.picker.find('.next').html(this.o.s.rightArrow);
 		}
 
 		this._buildEvents();
@@ -181,7 +181,7 @@
 			return $.map(daysOfWeek, Number);
 		},
 
-		_check_template: function(tmp){
+		_check_: function(tmp){
 			try {
 				// If empty
 				if (tmp === undefined || tmp === "") {
@@ -1712,7 +1712,7 @@
 		container: 'body',
 		immediateUpdates: false,
 		title: '',
-		templates: {
+		s: {
 			leftArrow: '&#x00AB;',
 			rightArrow: '&#x00BB;'
 		},
@@ -1936,18 +1936,18 @@
 			}
 			return date.join('');
 		},
-		headTemplate: '<thead>'+
+		head: '<thead>'+
 			              '<tr>'+
 			                '<th colspan="7" class="datepicker-title"></th>'+
 			              '</tr>'+
 							'<tr>'+
-								'<th class="prev">'+defaults.templates.leftArrow+'</th>'+
+								'<th class="prev">'+defaults.s.leftArrow+'</th>'+
 								'<th colspan="5" class="datepicker-switch"></th>'+
-								'<th class="next">'+defaults.templates.rightArrow+'</th>'+
+								'<th class="next">'+defaults.s.rightArrow+'</th>'+
 							'</tr>'+
 						'</thead>',
-		contTemplate: '<tbody><tr><td colspan="7"></td></tr></tbody>',
-		footTemplate: '<tfoot>'+
+		cont: '<tbody><tr><td colspan="7"></td></tr></tbody>',
+		foot: '<tfoot>'+
 							'<tr>'+
 								'<th colspan="7" class="today"></th>'+
 							'</tr>'+
@@ -1956,40 +1956,40 @@
 							'</tr>'+
 						'</tfoot>'
 	};
-	DPGlobal.template = '<div class="datepicker">'+
+	DPGlobal. = '<div class="datepicker">'+
 							'<div class="datepicker-days">'+
 								'<table class="table-condensed">'+
-									DPGlobal.headTemplate+
+									DPGlobal.head+
 									'<tbody></tbody>'+
-									DPGlobal.footTemplate+
+									DPGlobal.foot+
 								'</table>'+
 							'</div>'+
 							'<div class="datepicker-months">'+
 								'<table class="table-condensed">'+
-									DPGlobal.headTemplate+
-									DPGlobal.contTemplate+
-									DPGlobal.footTemplate+
+									DPGlobal.head+
+									DPGlobal.cont+
+									DPGlobal.foot+
 								'</table>'+
 							'</div>'+
 							'<div class="datepicker-years">'+
 								'<table class="table-condensed">'+
-									DPGlobal.headTemplate+
-									DPGlobal.contTemplate+
-									DPGlobal.footTemplate+
+									DPGlobal.head+
+									DPGlobal.cont+
+									DPGlobal.foot+
 								'</table>'+
 							'</div>'+
 							'<div class="datepicker-decades">'+
 								'<table class="table-condensed">'+
-									DPGlobal.headTemplate+
-									DPGlobal.contTemplate+
-									DPGlobal.footTemplate+
+									DPGlobal.head+
+									DPGlobal.cont+
+									DPGlobal.foot+
 								'</table>'+
 							'</div>'+
 							'<div class="datepicker-centuries">'+
 								'<table class="table-condensed">'+
-									DPGlobal.headTemplate+
-									DPGlobal.contTemplate+
-									DPGlobal.footTemplate+
+									DPGlobal.head+
+									DPGlobal.cont+
+									DPGlobal.foot+
 								'</table>'+
 							'</div>'+
 						'</div>';
