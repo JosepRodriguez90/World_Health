@@ -72,7 +72,7 @@ $fila=mysqli_fetch_row($resultados);
   <!-- ======= Header logfejat ======= -->
 <header id="header" >
   <div class="container d-flex align-items-center" style="margin-top: 25px;">
-    <a href="perfil.html">
+    <a href="Esperfil_doctor.php">
     <img class="me-auto" src="assets/img/logo_wh.jpg" width="300">
     </a>
     <!-- <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/logo_wh.jpg"></a></h1> -->
@@ -192,7 +192,7 @@ $fila=mysqli_fetch_row($resultados);
                 </div>
                 
               </div>
-                <a href="soporte.html" style="margin-left: 625px;"><span  class="btn btn-warning">Soporte</span></a>
+                <a href="Essoporte.html" style="margin-left: 625px;"><span  class="btn btn-warning">Soporte</span></a>
 
             </div>
           </div>

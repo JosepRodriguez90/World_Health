@@ -72,7 +72,7 @@ $fila=mysqli_fetch_row($resultados);
   <!-- ======= Header logfejat ======= -->
 <header id="header" >
   <div class="container d-flex align-items-center" style="margin-top: 25px;">
-    <a href="perfil.html">
+    <a href="Inperfil_doctor.php">
     <img class="me-auto" src="assets/img/logo_wh.jpg" width="300">
     </a>
     <!-- <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/logo_wh.jpg"></a></h1> -->
@@ -81,12 +81,12 @@ $fila=mysqli_fetch_row($resultados);
 
     <nav id="navbar" class="navbar order-last order-lg-0" style="padding-left: 350px;">
       <ul>
-        <li><a class="nav-link scrollto active" href="Esperfil_doctor.php">Perfil</a> </li>
+        <li><a class="nav-link scrollto active" href="Inperfil_doctor.php">Profile</a> </li>
 
-        <li><a class="nav-link scrollto " href="Esinformacion.html">Informacion</a></li>
-        <li><a class="nav-link scrollto" href="Esbuscador.html">Buscar Medicamentso</a></li>
+        <li><a class="nav-link scrollto " href="Ininformacion.html">Information</a></li>
+        <li><a class="nav-link scrollto" href="Inbuscador.html">Search Medication</a></li>
            
-        <li><a class="nav-link scrollto" href="Espregunta1.html">I.A. </a></li>
+        <li><a class="nav-link scrollto" href="Inpregunta1.html">I.A. </a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -94,7 +94,7 @@ $fila=mysqli_fetch_row($resultados);
 
 
     </ul>
-    <a href="Esindex.html"><span class="btn btn-danger">Cerrar sesion</span></a>
+    <a href="Inindex.html"><span class="btn btn-danger">Sign off</span></a>
 
   </div>
 </header><!-- End Header -->
@@ -142,7 +142,7 @@ $fila=mysqli_fetch_row($resultados);
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Nombre</h6>
+                      <h6 class="mb-0">Firstname</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                       <?php 
@@ -154,7 +154,7 @@ $fila=mysqli_fetch_row($resultados);
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Apellidos</h6>
+                      <h6 class="mb-0">Lastname</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                     <?php 
@@ -176,7 +176,7 @@ $fila=mysqli_fetch_row($resultados);
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Telefono</h6>
+                      <h6 class="mb-0">Phone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                     <?php 
@@ -192,7 +192,7 @@ $fila=mysqli_fetch_row($resultados);
                 </div>
                 
               </div>
-                <a href="soporte.html" style="margin-left: 625px;"><span  class="btn btn-warning">Soporte</span></a>
+                <a href="Insoporte.html" style="margin-left: 625px;"><span  class="btn btn-warning">Suport</span></a>
 
             </div>
           </div>
