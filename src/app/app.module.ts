@@ -12,6 +12,8 @@ import { EsloginComponent } from './components/eslogin/eslogin.component';
 import { InindexComponent } from './components/inindex/inindex.component';
 import { AbouthealthworldComponent } from './components/abouthealthworld/abouthealthworld.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { InheaderComponent } from './components/inheader/inheader.component';
+import { InloginComponent } from './components/inlogin/inlogin.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ContactComponent } from './components/contact/contact.component';
     EsloginComponent,
     InindexComponent,
     AbouthealthworldComponent,
-    ContactComponent
+    ContactComponent,
+    InheaderComponent,
+    InloginComponent
   ],
   imports: [
     BrowserModule,

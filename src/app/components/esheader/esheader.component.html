@@ -1,6 +1,6 @@
   <header id="header">
     <div class="container d-flex align-items-center">
-      <a href="Esindex.html">
+      <a [routerLink]="['../index']" routerLinkActive="active" class="nav-link scrollto">
       <img class="me-auto" src="/assets/logo_wh.jpg" width="300">
       </a>
       <!-- <h1 class="logo me-auto"><a href="index.html"><img src="assets/img/logo_wh.jpg"></a></h1> -->
@@ -16,7 +16,7 @@
           <li class="dropdown"><a href="#"><span>Idioma</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a [routerLink]="['../index']" routerLinkActive="active" class="nav-link scrollto">Español</a></li>
-              <li><a href="Inindex.html">Inglés</a></li>
+              <li><a [routerLink]="['../inindex']" routerLinkActive="active" class="nav-link scrollto">Inglés</a></li>
             </ul>
           </li>
         </ul>

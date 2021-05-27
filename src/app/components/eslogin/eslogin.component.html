@@ -1,6 +1,7 @@
+<div class="container">
 <div class="col-4 mt-4 login">
     <form action="Eslogin.php" method="post">
-      <a href="Esindex.html">
+      <a [routerLink]="['../index']" routerLinkActive="active" class="nav-link scrollto">
         <img class="mb-4" src="/assets/logo_wh.jpg" width="200">
       </a>
       <h1 class="h3 mb-3 fw-normal textbluedark">Iniciar sesion</h1>
@@ -21,6 +22,8 @@
       </div> -->
       <input class="w-100 btn btn-lg btn-primary" type="submit" value="Iniciar Sesion">
       <br> <br>
-      <a href="Esindex.html" class="btn btn-secondary mb-2">Volver a inicio</a>
+
+      <a [routerLink]="['../index']" routerLinkActive="active" class="btn btn-secondary mb-2">Volver a inicio</a>
     </form>
+</div>
 </div>
