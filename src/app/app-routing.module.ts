@@ -25,6 +25,7 @@ const routes: Routes = [{path: '', pathMatch: 'full', redirectTo: 'index'},
 { path: 'abouthealthworld', component: AbouthealthworldComponent},
 { path: 'contact', component: ContactComponent},
 { path: 'inlogin', component: InloginComponent},
+{ path: '**', redirectTo: 'index'},
 ];
 
 @NgModule({

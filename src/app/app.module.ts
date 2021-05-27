@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +16,9 @@ import { AbouthealthworldComponent } from './components/abouthealthworld/abouthe
 import { ContactComponent } from './components/contact/contact.component';
 import { InheaderComponent } from './components/inheader/inheader.component';
 import { InloginComponent } from './components/inlogin/inlogin.component';
+
+import { UsuariosService } from './services/usuarios.service';
+import { AdminService } from './services/admin.service';
 
 @NgModule({
   declarations: [
@@ -32,9 +37,14 @@ import { InloginComponent } from './components/inlogin/inlogin.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    UsuariosService,
+    AdminService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
