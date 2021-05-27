@@ -16,6 +16,6 @@ export class UsuariosService {
 
   login(loginData): Observable<ApiResponse> {
     console.log("entre");
-    return this.http.post<ApiResponse>(this.baseUrl + '/hola.php', loginData);
+    return this.http.post<ApiResponse>(this.baseUrl + 'hola.php', loginData);
   }
 }

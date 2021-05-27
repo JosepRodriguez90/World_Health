@@ -4,29 +4,12 @@
     <div class="jumbotron mt-4">
 
       <div align="center">
-        <img src="../../../assets/logo_wh.jpg" width="200" alt="alumne">
+        <a routerLink="../index" routerLinkActive="active" ><img src="../../../assets/logo_wh.jpg" width="200" alt="alumne"></a>
       </div>
 
-      <h2 class="text-center text-dark">Registrar-me com alumne</h2>
+      <h2 class="text-center text-dark mt-5">Iniciar Sessio</h2>
 
       <form [formGroup]='loginForm' (ngSubmit)="onSubmit()">
-
-
-        <div class="form-group">
-          <label class="text-dark" for="contrasenya">Contrasenya:</label>
-          <div class="input-group mb-3">
-            <input type="password" class="form-control" formControlName="contrasenya" id="contrasenya" [ngClass] = "{'is-invalid': submitted && f.contrasenya.errors}" required maxlength="20">
-            <div class="input-group-append">
-              <button class="btn btn-secondary" type="button" (click)="mostrarContrasenya()"><svg id=clickme width=19 height=16 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M569.354 231.631C512.97 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-102.556 0-192.091-54.701-240-136 44.157-74.933 123.677-127.27 216.162-135.007C273.958 131.078 280 144.83 280 160c0 30.928-25.072 56-56 56s-56-25.072-56-56l.001-.042C157.794 179.043 152 200.844 152 224c0 75.111 60.889 136 136 136s136-60.889 136-136c0-31.031-10.4-59.629-27.895-82.515C451.704 164.638 498.009 205.106 528 256c-47.908 81.299-137.444 136-240 136z"/></svg></button>
-            </div>
-            <div *ngIf = "submitted && f.contrasenya.errors" class="invalid-feedback">
-              <div *ngIf = "f.contrasenya.errors.required">
-                Falte la contrasenya
-              </div>
-            </div>
-          </div>
-        </div>
-
 
         <div class="form-group">
           <label class="text-dark" for="correu">Correu electronic:</label>
@@ -35,6 +18,31 @@
             <div *ngIf = "submitted && f.correu.errors" class="invalid-feedback">
               <div *ngIf = "f.correu.errors.required">
                 Falte el correu
+              </div>
+            </div>
+            <div *ngIf = "validadorsPetits && f.correu.errors" class="invalid-feedback">
+              <div *ngIf = "f.correu.errors.pattern">
+                Aixo no es un correu electronic
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="text-dark" for="contrasenya">Contrasenya:</label>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" formControlName="contrasenya" id="contrasenya" [ngClass] = "{'is-invalid': submitted && f.contrasenya.errors}" required maxlength="20" minlength="3">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" (click)="mostrarContrasenya()"><svg id=clickme width=19 height=16 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M569.354 231.631C512.97 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-102.556 0-192.091-54.701-240-136 44.157-74.933 123.677-127.27 216.162-135.007C273.958 131.078 280 144.83 280 160c0 30.928-25.072 56-56 56s-56-25.072-56-56l.001-.042C157.794 179.043 152 200.844 152 224c0 75.111 60.889 136 136 136s136-60.889 136-136c0-31.031-10.4-59.629-27.895-82.515C451.704 164.638 498.009 205.106 528 256c-47.908 81.299-137.444 136-240 136z"/></svg></button>
+            </div>
+            <div *ngIf = "submitted && f.contrasenya.errors" class="invalid-feedback">
+              <div *ngIf = "f.contrasenya.errors.required">
+                Falte la contrasenya
+              </div>
+            </div>
+            <div *ngIf = "validadorsPetits && f.contrasenya.errors" class="invalid-feedback">
+              <div *ngIf = "f.contrasenya.errors.minlength">
+                Contrasenya massa curta (minim 3 caracters)
               </div>
             </div>
           </div>

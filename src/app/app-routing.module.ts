@@ -11,21 +11,24 @@ import { InheaderComponent } from './components/inheader/inheader.component';
 import { AbouthealthworldComponent } from './components/abouthealthworld/abouthealthworld.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { InloginComponent } from './components/inlogin/inlogin.component';
+import { Error404Component } from './components/error404/error404.component';
 
 
-const routes: Routes = [{path: '', pathMatch: 'full', redirectTo: 'index'},
-{ path: 'index', component: IndexComponent},
-{ path: 'contactar', component: ContactarComponent},
-{ path: 'esheader', component: EsheaderComponent},
-{ path: 'sobrehealthworld', component: SobrehealthworldComponent},
-{ path: 'footer', component: FooterComponent},
-{ path: 'eslogin', component: EsloginComponent},
-{ path: 'inindex', component: InindexComponent},
-{ path: 'inheader', component: InheaderComponent},
-{ path: 'abouthealthworld', component: AbouthealthworldComponent},
-{ path: 'contact', component: ContactComponent},
-{ path: 'inlogin', component: InloginComponent},
-{ path: '**', redirectTo: 'index'},
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'index'},
+  { path: 'index', component: IndexComponent},
+  { path: 'contactar', component: ContactarComponent},
+  { path: 'esheader', component: EsheaderComponent},
+  { path: 'sobrehealthworld', component: SobrehealthworldComponent},
+  { path: 'footer', component: FooterComponent},
+  { path: 'eslogin', component: EsloginComponent},
+  { path: 'inindex', component: InindexComponent},
+  { path: 'inheader', component: InheaderComponent},
+  { path: 'abouthealthworld', component: AbouthealthworldComponent},
+  { path: 'contact', component: ContactComponent},
+  { path: 'inlogin', component: InloginComponent},
+  { path: 'error404', component: Error404Component},
+  { path: '**', redirectTo: 'error404'},
 ];
 
 @NgModule({

@@ -21,15 +21,17 @@ export class EsloginComponent implements OnInit {
   loginForm: FormGroup;
   invalidLogin: boolean = false;
   submitted: boolean = false;
+  validadorsPetits: boolean = false;
   message: any;
   loginData: null;
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      contrasenya: ['', Validators.compose([Validators.required, Validators.min(3), Validators.max(20)])],
-      correo: ['', Validators.compose([Validators.required, Validators.min(3), Validators.max(30), Validators.email])]
+      correu: ['', Validators.compose([Validators.required, Validators.min(3), Validators.max(30), Validators.email])],
+      contrasenya: ['', Validators.compose([Validators.required, Validators.min(3), Validators.max(20)])]
     });
 
+    this.validadorsPetits = true;
   }
 
   mostrarContrasenya(){
@@ -58,6 +60,16 @@ export class EsloginComponent implements OnInit {
     }
 
     console.log("login valid!");
+
+    const loginData = {
+      correu: this.loginForm.controls.correu.value,
+      contrasenya: this.loginForm.controls.contrasenya.value
+    };
+
+    this.apiService.login(loginData).subscribe((data: any) => {
+      this.message = data.message;
+      console.log("entre al php");
+    })
 
 
 

@@ -19,6 +19,7 @@ import { InloginComponent } from './components/inlogin/inlogin.component';
 
 import { UsuariosService } from './services/usuarios.service';
 import { AdminService } from './services/admin.service';
+import { Error404Component } from './components/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AdminService } from './services/admin.service';
     AbouthealthworldComponent,
     ContactComponent,
     InheaderComponent,
-    InloginComponent
+    InloginComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
