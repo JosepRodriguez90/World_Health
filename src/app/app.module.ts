@@ -20,6 +20,8 @@ import { InloginComponent } from './components/inlogin/inlogin.component';
 import { UsuariosService } from './services/usuarios.service';
 import { AdminService } from './services/admin.service';
 import { Error404Component } from './components/error404/error404.component';
+import { UsuarioPerfilComponent } from './components/usuario-perfil/usuario-perfil.component';
+import { UsuarioHeaderComponent } from './components/usuario-header/usuario-header.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { Error404Component } from './components/error404/error404.component';
     ContactComponent,
     InheaderComponent,
     InloginComponent,
-    Error404Component
+    Error404Component,
+    UsuarioPerfilComponent,
+    UsuarioHeaderComponent
   ],
   imports: [
     BrowserModule,

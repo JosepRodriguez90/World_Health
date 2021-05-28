@@ -3,6 +3,8 @@ import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angula
 import { UsuariosService } from '../../services/usuarios.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { ApiResponse } from '../../model/api-response';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-eslogin',
@@ -22,13 +24,16 @@ export class EsloginComponent implements OnInit {
   invalidLogin: boolean = false;
   submitted: boolean = false;
   validadorsPetits: boolean = false;
-  message: any;
+  contrasenyaNoCoincideix: boolean = false;
+  usuariNoExisteix: boolean = false;
+  missatgeData: any;
+  correuData: any;
   loginData: null;
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      correu: ['', Validators.compose([Validators.required, Validators.min(3), Validators.max(30), Validators.email])],
-      contrasenya: ['', Validators.compose([Validators.required, Validators.min(3), Validators.max(20)])]
+      correu: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(30), Validators.email])],
+      contrasenya: ['', Validators.compose([Validators.required, Validators.minLength(3), Validators.maxLength(20)])]
     });
 
     this.validadorsPetits = true;
@@ -41,6 +46,10 @@ export class EsloginComponent implements OnInit {
     }else{
         tipo.type = "password";
     }
+  }
+
+  get f(){
+    return this.loginForm.controls;
   }
 
   onSubmit(){
@@ -67,16 +76,40 @@ export class EsloginComponent implements OnInit {
     };
 
     this.apiService.login(loginData).subscribe((data: any) => {
-      this.message = data.message;
+      this.missatgeData = data.missatge;
+
       console.log("entre al php");
+      console.log(this.missatgeData)
+
+      if(this.missatgeData == "Login Correcto"){
+        environment.correu = data.correu;
+        this.router.navigate(['usuario-perfil']);
+      }
+      else if(this.missatgeData == "Contraseña Incorrecta"){
+        this.contrasenyaNoCoincideix = true;
+        this.invalidLogin = true;
+        console.log("Contrasenya invalida");
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'La contraseña no coincide.',
+        })
+        return;
+      }
+      else{
+        this.usuariNoExisteix = true;
+        this.invalidLogin = true;
+        console.log("El usuari no existeix");
+
+        Swal.fire({
+          icon: 'error',
+          title: 'Error',
+          text: 'El usuario no existe.',
+        })
+        return;
+      }
     })
-
-
-
-  }
-
-  get f(){
-    return this.loginForm.controls;
   }
 
 }

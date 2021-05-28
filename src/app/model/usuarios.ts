@@ -1,7 +1,9 @@
 export class Usuarios {
-  public nick: number;
-  public correu: string;
-  public contrasenya: string;
-  public nom: string;
-  public cognoms: string;
+  public nom: number;
+  public cognom: string;
+  public telefon: string;
+  public email: string;
+  public dni: string;
+  public num_colegiat: string;
+  public altres: string;
 }

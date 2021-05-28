@@ -12,6 +12,8 @@ import { AbouthealthworldComponent } from './components/abouthealthworld/abouthe
 import { ContactComponent } from './components/contact/contact.component';
 import { InloginComponent } from './components/inlogin/inlogin.component';
 import { Error404Component } from './components/error404/error404.component';
+import { UsuarioPerfilComponent } from './components/usuario-perfil/usuario-perfil.component';
+import { UsuarioHeaderComponent } from './components/usuario-header/usuario-header.component';
 
 
 const routes: Routes = [
@@ -27,6 +29,8 @@ const routes: Routes = [
   { path: 'abouthealthworld', component: AbouthealthworldComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'inlogin', component: InloginComponent},
+  { path: 'usuario-perfil', component: UsuarioPerfilComponent},
+  { path: 'usuario-header', component: UsuarioHeaderComponent},
   { path: 'error404', component: Error404Component},
   { path: '**', redirectTo: 'error404'},
 ];

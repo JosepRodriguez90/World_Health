@@ -1,5 +1,6 @@
 export class ApiResponse {
-  result: any;
-  status: any;
-  message: any;
+  resultat: any;
+  estat: any;
+  missatge: any;
+  correu: any;
 }

@@ -15,7 +15,13 @@ export class UsuariosService {
   constructor(private http: HttpClient) { }
 
   login(loginData): Observable<ApiResponse> {
-    console.log("entre");
-    return this.http.post<ApiResponse>(this.baseUrl + 'hola.php', loginData);
+    console.log("entre al service de login");
+    return this.http.post<ApiResponse>(this.baseUrl + 'usuarioLogin.php', loginData);
   }
+
+  mostrarPerfil(correo): Observable<any> {
+    console.log("entre al service de mostrarPerfil");
+    return this.http.post<any>(this.baseUrl + 'usuarioPerfil.php', correo);
+  }
+
 }

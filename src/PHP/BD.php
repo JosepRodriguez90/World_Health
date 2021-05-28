@@ -4,7 +4,7 @@ class BD{
   private $db_host = "localhost";
   private $db_user = "root";
   private $db_password = "usbw";
-  private $db_name = "gamifica";
+  private $db_name = "kummonapps";
   private $con = false;
 
   public function conexio(){
