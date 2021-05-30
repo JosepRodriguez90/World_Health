@@ -22,6 +22,10 @@ import { AdminService } from './services/admin.service';
 import { Error404Component } from './components/error404/error404.component';
 import { UsuarioPerfilComponent } from './components/usuario-perfil/usuario-perfil.component';
 import { UsuarioHeaderComponent } from './components/usuario-header/usuario-header.component';
+import { AdminheaderComponent } from './components/admin/adminheader/adminheader.component';
+import { MedicamientosComponent } from './components/admin/medicamientos/medicamientos.component';
+import { MedicosComponent } from './components/admin/medicos/medicos.component';
+import { AdminhomeComponent } from './components/admin/adminhome/adminhome.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { UsuarioHeaderComponent } from './components/usuario-header/usuario-head
     InloginComponent,
     Error404Component,
     UsuarioPerfilComponent,
-    UsuarioHeaderComponent
+    UsuarioHeaderComponent,
+    AdminheaderComponent,
+    MedicamientosComponent,
+    MedicosComponent,
+    AdminhomeComponent
   ],
   imports: [
     BrowserModule,

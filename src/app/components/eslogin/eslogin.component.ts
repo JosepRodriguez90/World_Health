@@ -83,7 +83,12 @@ export class EsloginComponent implements OnInit {
 
       if(this.missatgeData == "Login Correcto"){
         environment.correu = data.correu;
-        this.router.navigate(['usuario-perfil']);
+        if(environment.correu=='admin@admin.com'){
+          this.router.navigate(['adminhomeComponent']);
+        }else{
+          this.router.navigate(['usuario-perfil']);
+        }
+
       }
       else if(this.missatgeData == "Contraseña Incorrecta"){
         this.contrasenyaNoCoincideix = true;

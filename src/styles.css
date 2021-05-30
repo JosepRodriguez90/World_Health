@@ -469,6 +469,87 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+#admin {
+  width: 100%;
+  height: 90vh;
+  background: url("/assets/adminimg.jpg") top center;
+  background-size: cover;
+  margin-bottom: -200px;
+}
+
+#admin .container {
+  position: relative;
+}
+
+#admin h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #e9f4ff;
+}
+
+#admin h2 {
+  color: #e9f4ff;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+#admin .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 35px;
+  margin-top: 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  background: #1977cc;
+}
+
+#admin .btn-get-started:hover {
+  background: #3291e6;
+}
+
+@media (min-width: 1024px) {
+  #admin {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 992px) {
+  #admin {
+    margin-bottom: 0;
+    height: 100vh;
+  }
+  #admin .container {
+    padding-bottom: 63px;
+  }
+  #admin h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #admin h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-height: 600px) {
+  #admin {
+    height: 110vh;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 90vh;
