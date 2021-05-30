@@ -25,7 +25,7 @@ export class UsuarioPerfilComponent implements OnInit {
 
     this.apiService.mostrarPerfil(correo).subscribe((data: Usuarios) => {
       this.usuario = data;
-      console.log("el valor del usuario loguejat es: "+this.usuario.dni);
+      console.log("el DNI del usuario loguejat es: "+this.usuario.dni);
       console.log("entre al php");
 
       // this.usuario.dni = data.dni;

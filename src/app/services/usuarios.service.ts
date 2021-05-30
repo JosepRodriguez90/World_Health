@@ -19,9 +19,9 @@ export class UsuariosService {
     return this.http.post<ApiResponse>(this.baseUrl + 'usuarioLogin.php', loginData);
   }
 
-  mostrarPerfil(correo): Observable<any> {
+  mostrarPerfil(correo): Observable<Usuarios> {
     console.log("entre al service de mostrarPerfil");
-    return this.http.post<any>(this.baseUrl + 'usuarioPerfil.php', correo);
+    return this.http.post<Usuarios>(this.baseUrl + 'usuarioPerfil.php', correo);
   }
 
 }

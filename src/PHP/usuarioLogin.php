@@ -8,7 +8,6 @@ require 'BD.php';
 
 $headers = apache_request_headers();
 $postdata = file_get_contents("php://input");
-$entrar = false;
 $BDcon = new BD();
 $con = $BDcon->conexio();
 $request = json_decode($postdata);
@@ -28,21 +27,27 @@ if(isset($postdata) && !empty($postdata)) {
 
   if($resultadoUserExistSelect['cuantos'] == 1){
       if($resultadoPasswordExistSelect !== null){
-        echo json_encode(array(
-          "missatge" => "Login Correcto",
-          "correu" => $correu
-        ));
+        echo json_encode(
+          array(
+            "missatge" => "Login Correcto",
+            "correu" => $correu
+          )
+        );
       }
       else{
-        echo json_encode(array(
-          "missatge" => "Contraseña Incorrecta",
-        ));
+        echo json_encode(
+          array(
+            "missatge" => "Contraseña Incorrecta",
+          )
+        );
       }
   }
   else{
-    echo json_encode(array(
-      "missatge" => "Usuario Inexistente"
-    ));
+    echo json_encode(
+      array(
+        "missatge" => "Usuario Inexistente"
+      )
+    );
   }
 }
 ?>

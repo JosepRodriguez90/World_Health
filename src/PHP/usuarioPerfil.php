@@ -52,15 +52,17 @@ if(isset($postdata) && !empty($postdata)) {
   $resultadoNumColegiat = mysqli_fetch_assoc($consultaNumColegiat);
   $resultadoAltres = mysqli_fetch_assoc($consultaAltres);
 
-  echo json_encode(array(
-    "nom" => $resultadoNom,
-    "cognom" => $resultadoCognom,
-    "telefon" => $resultadoTelefon,
-    "email" => $correu,
-    "dni" => $resultadoDni,
-    "num_colegiat" => $resultadoNumColegiat,
-    "altres" => $resultadoAltres
-  ));
+  echo json_encode(
+    array(
+      "nom" => $resultadoNom,
+      "cognom" => $resultadoCognom,
+      "telefon" => $resultadoTelefon,
+      "email" => $correu,
+      "dni" => $resultadoDni,
+      "num_colegiat" => $resultadoNumColegiat,
+      "altres" => $resultadoAltres
+    )
+  );
 }
 
 ?>
