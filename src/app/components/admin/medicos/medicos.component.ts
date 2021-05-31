@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AdminService } from '../../../services/admin.service';
 import { consultarusuaris } from '../../../model/consultarusuaris';
 
+
 @Component({
   selector: 'app-medicos',
   templateUrl: './medicos.component.html',
@@ -16,6 +17,7 @@ export class MedicosComponent implements OnInit {
   usu;
 
   constructor( private AdminService: AdminService,
+    private router: Router,
     ) { }
 
   ngOnInit(): void {
@@ -34,13 +36,20 @@ export class MedicosComponent implements OnInit {
   eliminar(item){
 
     console.log(item[0])
-    this.AdminService.eliminarUsuario(item[0]).subscribe (
+    this.AdminService.eliminarMedicamiento(item[0]).subscribe (
       datos => {
 
         console.log(datos)
+        console.log(item[0])
+        console.log(item[1])
+        console.log(item[2])
         location.reload();
       })
 
+  }
+
+  crear(){
+    this.router.navigate(['crearusuariosComponent']);
   }
 
 }

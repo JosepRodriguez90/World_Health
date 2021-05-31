@@ -26,6 +26,7 @@ import { AdminheaderComponent } from './components/admin/adminheader/adminheader
 import { MedicamientosComponent } from './components/admin/medicamientos/medicamientos.component';
 import { MedicosComponent } from './components/admin/medicos/medicos.component';
 import { AdminhomeComponent } from './components/admin/adminhome/adminhome.component';
+import { CrearusuariosComponent } from './components/admin/crearusuarios/crearusuarios.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { AdminhomeComponent } from './components/admin/adminhome/adminhome.compo
     AdminheaderComponent,
     MedicamientosComponent,
     MedicosComponent,
-    AdminhomeComponent
+    AdminhomeComponent,
+    CrearusuariosComponent
   ],
   imports: [
     BrowserModule,

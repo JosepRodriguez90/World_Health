@@ -7,6 +7,8 @@ import { environment } from 'src/environments/environment';
 import { consultarmedicament } from '../model/consultarmedicament';
 import { consultarusuaris } from '../model/consultarusuaris';
 import { EliminarUsuario } from '../model/EliminarUsuario';
+import { EliminarMedicamiento} from '../model/EliminarMedicamiento';
+import { User} from '../model/User';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +34,17 @@ export class AdminService {
     console.log(id_usuario);
     return this.http.post<EliminarUsuario>(this.baseUrl + '/eliminarUsuarios.php', id_usuario)
 
+  }
+
+  eliminarMedicamiento(id_medicamiento): Observable<EliminarMedicamiento>{
+    console.log(id_medicamiento);
+    return this.http.post<EliminarMedicamiento>(this.baseUrl + '/eliminarMedicamiento.php', id_medicamiento)
+
 }
+
+  createUser(user: User): Observable<ApiResponse> {
+    console.log(user);
+    return this.http.post<ApiResponse>(this.baseUrl + '/insertUsuario.php', user);
+  }
 
 }

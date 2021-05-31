@@ -31,4 +31,17 @@ export class MedicamientosComponent implements OnInit {
       })
   }
 
+
+  eliminar(item){
+
+    console.log(item[0])
+    this.AdminService.eliminarMedicamiento(item[0]).subscribe (
+      datos => {
+
+        console.log(datos)
+        location.reload();
+      })
+
+  }
+
 }

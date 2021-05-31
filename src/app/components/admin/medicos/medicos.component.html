@@ -1,11 +1,11 @@
 <app-adminheader></app-adminheader>
-<div class="banner text-left">
+<div class="banner text-left mt-4">
   <div class="row justify-content-center">
       <div class="col-auto">
-          <table class="table table-responsive">
+          <table class="table table-responsive table-hover">
 
               <thead>
-                  <tr class="text-center">
+                  <tr class="text-center table-primary">
                       <th scope="col">Nombre</th>
                       <th scope="col">Apellido</th>
                       <th scope="col">numero colegiado</th>
@@ -18,12 +18,12 @@
                       <td><b>{{item[1]}}</b></td>
                       <td><b>{{item[2]}}</b></td>
                       <td><b>{{item[3]}}</b></td>
-                      <td>
-                          <button class="btn btn-opacity-warning mr-3">
-              Modificar
-            </button>
-                      </td>
 
+                      <td>
+                          <a href="javascript:void(0);" class="btn btn-opacity-success"  (click)="edit(item)">
+              Modificar
+          </a>
+                    </td>
 
                       <td>
                           <button class="btn btn-opacity-danger" (click)="eliminar(item)">
@@ -34,6 +34,13 @@
                   </tr>
               </tbody>
           </table>
+
+            <button class="appointment-btn scrollto ml-0 mr-2" (click)="crear()">
+            <!-- <a [routerLink]="['../crearusuarios']" routerLinkActive="active" class="btn btn-opacity-warning mr-3"> -->
+        Crear
+        </button>
+        <!-- </a> -->
+
       </div>
   </div>
 </div>

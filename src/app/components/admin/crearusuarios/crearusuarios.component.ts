@@ -1,0 +1,93 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
+import { AdminService } from '../../../services/admin.service';
+
+@Component({
+  selector: 'app-crearusuarios',
+  templateUrl: './crearusuarios.component.html',
+  styleUrls: ['./crearusuarios.component.css']
+})
+export class CrearusuariosComponent implements OnInit {
+
+  constructor(private formBuilder: FormBuilder,
+    private router: Router,
+    private AdminService: AdminService
+    ) { }
+
+    addForm: FormGroup;
+    token: any;
+    submitted = false;
+    usuarioExiste;
+
+    ngOnInit(): void {
+      this.addForm = this.formBuilder.group({
+        password: ['', Validators.required],
+        firstName: ['', Validators.required],
+        lastName: ['', Validators.required],
+        telefon: ['', Validators.required],
+        dni: ['', Validators.required],
+        numero_colegiado: ['', Validators.required],
+        especialidad: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]]
+      });
+
+    }
+
+    get f() {
+      return this.addForm.controls;
+    }
+
+  mostrarContrasena() {
+    let tipo: any = document.getElementById("password");
+    if (tipo.type == "password") {
+      tipo.type = "text";
+    } else {
+      tipo.type = "password";
+    }
+  }
+
+
+  onSubmit() {
+    this.submitted = true;
+    console.log(this.addForm.value);
+
+    if (this.addForm.invalid) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Los datos no son correctos.',
+      })
+      return;
+    }
+    else {
+
+      this.AdminService.createUser(this.addForm.value).subscribe(
+        (data) => {
+          console.log(data);
+
+          if (data) {
+            Swal.fire({
+              icon: 'success',
+              title: 'S´ha registrat correctament',
+              showConfirmButton: false,
+              timer: 1500
+            }).then((result) => {
+              this.router.navigate(['medicosComponent']);
+            });
+          }
+          else {
+            Swal.fire({
+              icon: 'error',
+              title: data,
+              showConfirmButton: false,
+              timer: 1500
+            });
+          }
+        }
+      );
+    }
+  }
+
+}

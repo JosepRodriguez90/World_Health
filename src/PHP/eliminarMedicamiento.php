@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 
-   $db_host = "localhost";
+    $db_host = "localhost";
     $db_user = "root";
     $db_password = "usbw";
     $db_name = "kummonapps";
@@ -25,25 +25,14 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
   $postdata = file_get_contents("php://input");
   $request = json_decode($postdata);
 
-  $x=0;
+  $cesta="DELETE FROM medicaments where id_medicament=$request";
 
-  $cesta="SELECT id_usuari, nom, cognom, num_colegiat FROM usuari where nom!='admin' ";
 
   $resultados=mysqli_query($conexion, $cesta);
 
-  while ($valores = mysqli_fetch_array($resultados)) {
-    $array[$x][0]=$valores[0];
-    $array[$x][1]=$valores[1];
-    $array[$x][2]=$valores[2];
-    $array[$x][3]=$valores[3];
-    $x++;
 
-  }
+  header('Content-Type: application/json');
+  echo json_encode($request);
 
 
-// echo "<div>" .  $valor. "</div>";
-// echo "<div>" .   $fila['nom'] . "</div>";
-echo json_encode($array);
-
-
-?>
+  ?>
