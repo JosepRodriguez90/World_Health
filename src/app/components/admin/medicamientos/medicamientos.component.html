@@ -1,0 +1,38 @@
+<app-adminheader></app-adminheader>
+<div class="banner text-left">
+  <div class="row justify-content-center">
+      <div class="col-auto">
+          <table class="table table-responsive">
+
+              <thead>
+                  <tr class="text-center">
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Codi de barres</th>
+                      <th scope="col">Modificar</th>
+                      <th scope="col">Borrar</th>
+                  </tr>
+              </thead>
+              <tbody  *ngFor="let item of medicamentos">
+                  <tr>
+                      <td><b>{{item[0]}}</b></td>
+                      <td><b>{{item[1]}}</b></td>
+                      <td>
+                          <button class="btn btn-opacity-warning mr-3">
+              Modificar
+            </button>
+                      </td>
+
+
+                      <td>
+                          <button class="btn btn-opacity-danger">
+              Borrar
+            </button>
+                      </td>
+
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
+<app-footer></app-footer>
