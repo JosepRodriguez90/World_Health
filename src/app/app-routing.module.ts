@@ -18,6 +18,7 @@ import { MedicamientosComponent } from './components/admin/medicamientos/medicam
 import { MedicosComponent } from './components/admin/medicos/medicos.component';
 import { AdminhomeComponent } from './components/admin/adminhome/adminhome.component';
 import { CrearusuariosComponent } from './components/admin/crearusuarios/crearusuarios.component';
+import { CrearmedicaComponent } from './components/admin/crearmedica/crearmedica.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'medicosComponent', component: MedicosComponent},
   { path: 'adminhomeComponent', component: AdminhomeComponent},
   { path: 'crearusuariosComponent', component: CrearusuariosComponent},
+  { path: 'crearmedicaComponent', component: CrearmedicaComponent},
   { path: '**', redirectTo: 'error404'},
 ];
 

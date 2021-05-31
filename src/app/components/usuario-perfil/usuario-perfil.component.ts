@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./usuario-perfil.component.css']
 })
 export class UsuarioPerfilComponent implements OnInit {
-
+  correo: string;
   usuario: Usuarios;
 
   constructor(
@@ -20,15 +20,24 @@ export class UsuarioPerfilComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const correo = environment.correu;
-    console.log(correo);
+    this.usuario = new Usuarios();
+    this.correo = environment.correu;
 
-    this.apiService.mostrarPerfil(correo).subscribe((data: Usuarios) => {
-      this.usuario = data;
-      console.log("el DNI del usuario loguejat es: "+this.usuario.dni);
+    console.log(this.correo);
+
+    this.apiService.mostrarPerfil(this.correo).subscribe((data: Usuarios[]) => {
       console.log("entre al php");
-
-      // this.usuario.dni = data.dni;
+      console.log(data);
+      this.usuario.nom = data["nom"];
+      this.usuario.cognom = data["cognom"];
+      this.usuario.telefon = data["telefon"];
+      this.usuario.email = data["email"];
+      this.usuario.dni = data["dni"];
+      this.usuario.num_colegiat = data["num_colegiat"];
+      this.usuario.altres = data["altres"];
+      console.log("el nom del usuario loguejat es: "+this.usuario.nom);
+      console.log("el cognom del usuario loguejat es: "+this.usuario.cognom);
+      console.log("el email del usuario loguejat es: "+this.usuario.email);
     })
   }
 

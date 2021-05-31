@@ -36,7 +36,7 @@ export class MedicosComponent implements OnInit {
   eliminar(item){
 
     console.log(item[0])
-    this.AdminService.eliminarMedicamiento(item[0]).subscribe (
+    this.AdminService.eliminarUsuario(item[0]).subscribe (
       datos => {
 
         console.log(datos)

@@ -14,10 +14,12 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
     if (!$conexion)
     {
         die("No se ha podido realizar la corrección ERROR:" . mysqli_connect_error() . "<br>");
+        $funcioneconex=1;
     }
     else
     {
         mysqli_set_charset ($conexion, "utf8");
+        $funcioneconex=0;
     }
 
 
@@ -25,14 +27,35 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
   $postdata = file_get_contents("php://input");
   $request = json_decode($postdata);
 
-  $cesta="DELETE FROM medicaments where id_medicament=$request";
 
+  $cesta4="DELETE FROM simptomatologia where id_medicament=$request";
+
+  $resultados=mysqli_query($conexion, $cesta4);
+
+  $cesta3="DELETE FROM patologia where id_medicament=$request";
+
+  $resultados=mysqli_query($conexion, $cesta3);
+
+  $cesta7="DELETE FROM laboratori where id_medicament=$request";
+
+  $resultados=mysqli_query($conexion, $cesta7);
+
+  $cesta1="DELETE FROM efectes_secundaris where id_medicament=$request";
+
+  $resultados=mysqli_query($conexion, $cesta1);
+
+  $cesta2="DELETE FROM forma_farmaceutica where id_medicament=$request";
+
+  $resultados=mysqli_query($conexion, $cesta2);
+
+  $cesta="DELETE FROM medicaments where id_medicament=$request";
 
   $resultados=mysqli_query($conexion, $cesta);
 
 
+
   header('Content-Type: application/json');
-  echo json_encode($request);
+  echo json_encode($funcioneconex);
 
 
   ?>

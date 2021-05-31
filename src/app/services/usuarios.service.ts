@@ -14,14 +14,14 @@ export class UsuariosService {
 
   constructor(private http: HttpClient) { }
 
-  login(loginData): Observable<ApiResponse> {
+  login(loginData): Observable<any> {
     console.log("entre al service de login");
-    return this.http.post<ApiResponse>(this.baseUrl + 'usuarioLogin.php', loginData);
+    return this.http.post(this.baseUrl + 'usuarioLogin.php', JSON.stringify(loginData));
   }
 
-  mostrarPerfil(correo): Observable<Usuarios> {
+  mostrarPerfil(correo): Observable<any> {
     console.log("entre al service de mostrarPerfil");
-    return this.http.post<Usuarios>(this.baseUrl + 'usuarioPerfil.php', correo);
+    return this.http.post(this.baseUrl + 'usuarioPerfil.php', JSON.stringify(correo));
   }
 
 }

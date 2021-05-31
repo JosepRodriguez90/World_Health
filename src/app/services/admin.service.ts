@@ -9,6 +9,8 @@ import { consultarusuaris } from '../model/consultarusuaris';
 import { EliminarUsuario } from '../model/EliminarUsuario';
 import { EliminarMedicamiento} from '../model/EliminarMedicamiento';
 import { User} from '../model/User';
+import { Medica} from '../model/Medica';
+
 
 @Injectable({
   providedIn: 'root'
@@ -26,25 +28,31 @@ export class AdminService {
   }
 
   adminusuaris(consultarusuaris): Observable<consultarusuaris> {
-    console.log("entre al service llistamedicaments");
+    console.log("entre al service llistausuaris");
     return this.http.post<consultarusuaris>(this.baseUrl + 'llistausuaris.php', consultarusuaris)
   }
 
   eliminarUsuario(id_usuario): Observable<EliminarUsuario>{
     console.log(id_usuario);
-    return this.http.post<EliminarUsuario>(this.baseUrl + '/eliminarUsuarios.php', id_usuario)
+    return this.http.post<EliminarUsuario>(this.baseUrl + 'eliminarUsuarios.php', id_usuario)
 
   }
 
   eliminarMedicamiento(id_medicamiento): Observable<EliminarMedicamiento>{
     console.log(id_medicamiento);
-    return this.http.post<EliminarMedicamiento>(this.baseUrl + '/eliminarMedicamiento.php', id_medicamiento)
+    return this.http.post<EliminarMedicamiento>(this.baseUrl + 'eliminarMedicamiento.php', id_medicamiento)
 
-}
+  }
 
   createUser(user: User): Observable<ApiResponse> {
     console.log(user);
     return this.http.post<ApiResponse>(this.baseUrl + '/insertUsuario.php', user);
+  }
+
+
+  createMedica(medica: Medica): Observable<ApiResponse> {
+    console.log(medica);
+    return this.http.post<ApiResponse>(this.baseUrl + 'insertMedica.php', medica);
   }
 
 }

@@ -16,6 +16,7 @@ export class MedicamientosComponent implements OnInit {
   medica;
 
   constructor( private AdminService: AdminService,
+    private router: Router,
     ) { }
 
   ngOnInit(): void {
@@ -42,6 +43,10 @@ export class MedicamientosComponent implements OnInit {
         location.reload();
       })
 
+  }
+
+  crear(){
+    this.router.navigate(['crearmedicaComponent']);
   }
 
 }

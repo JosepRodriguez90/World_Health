@@ -1,6 +1,6 @@
 <app-usuario-header></app-usuario-header>
 
-<div class="container d-flex" *ngFor="let usuarios of this.usuario">
+<div class="container d-flex" *ngIf="usuario!==null">
   <div class="col-3">
     <div class="row">
       <div class="card">
