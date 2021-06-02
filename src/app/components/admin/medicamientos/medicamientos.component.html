@@ -1,41 +1,36 @@
 <app-adminheader></app-adminheader>
 <div class="banner text-left mt-4">
   <div class="row justify-content-center">
-      <div class="col-auto">
+      <div class="col-8">
           <table class="table table-responsive table-hover">
 
               <thead>
                   <tr class="text-center table-primary">
                       <th scope="col">Nombre</th>
                       <th scope="col">Codi de barres</th>
-                      <th scope="col">Modificar</th>
-                      <th scope="col">Borrar</th>
+                      <th scope="col">Accion</th>
                   </tr>
               </thead>
               <tbody  *ngFor="let item of medicamentos">
-                  <tr>
+                  <tr class="text-center">
                       <td><b>{{item[1]}}</b></td>
                       <td><b>{{item[2]}}</b></td>
 
                       <td>
                         <button class="btn btn-opacity-warning mr-3" (click)="modificar(item)">
-            Modificar
-          </button>
-                    </td>
-
-                      <td>
+                          Modificar
+                        </button>
                         <button class="btn btn-opacity-danger" (click)="eliminar(item)">
-              Borrar
-            </button>
+                          Borrar
+                        </button>
                       </td>
-
                   </tr>
               </tbody>
           </table>
 
           <button class="appointment-btn scrollto ml-0 mr-2" (click)="crear()">
-Crear
-</button>
+            Registrar
+          </button>
 
       </div>
   </div>

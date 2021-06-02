@@ -109,7 +109,7 @@
 
               <div class="form-group mt-2 mb-2">
                 <label for="especialidad">{{item[5]}}</label>
-                <input formControlName="especialidad" placeholder="especialidad" name="especialidad" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.especialidad.errors}">
+                <input formControlName="especialidad" placeholder="Especialidad/otros" name="especialidad" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.especialidad.errors}">
                 <div *ngIf = "submitted && f.especialidad.errors" class="invalid-feedback">
                   <div *ngIf = "f.especialidad.errors.required">
                     Falta el la especialidad/otros
@@ -127,7 +127,7 @@
 
               <div class="form-group mt-2 mb-2">
                 <label for="dni">{{item[6]}}</label>
-                <input formControlName="dni" placeholder="dni" name="dni" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.dni.errors}">
+                <input formControlName="dni" placeholder="Dni" name="dni" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.dni.errors}">
                 <div *ngIf = "submitted && f.dni.errors" class="invalid-feedback">
                   <div *ngIf = "f.dni.errors.required">
                     Falta el DNI

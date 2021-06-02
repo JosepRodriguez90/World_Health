@@ -4,7 +4,7 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="jumbotron mt-4">
 
-        <h2 class="text-center crearmodificar">Crear Usuario</h2>
+        <h2 class="text-center crearmodificar">Registrar Usuario</h2>
 
         <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
           <div class="form-group mt-2 mb-2">
@@ -28,8 +28,8 @@
           </div>
 
           <div class="form-group mt-2 mb-2">
-            <label for="telefon">telefon:</label>
-            <input formControlName="telefon" placeholder="telefon" name="telefon" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.telefon.errors}">
+            <label for="telefon">Telefon:</label>
+            <input formControlName="telefon" placeholder="Telefon" name="telefon" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.telefon.errors}">
             <div *ngIf = "submitted && f.telefon.errors" class="invalid-feedback">
               <div *ngIf = "f.telefon.errors.required">
                 Falta el telefono
@@ -38,8 +38,8 @@
           </div>
 
           <div class="form-group mt-2 mb-2">
-            <label for="dni">dni:</label>
-            <input formControlName="dni" placeholder="dni" name="dni" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.dni.errors}">
+            <label for="dni">Dni:</label>
+            <input formControlName="dni" placeholder="Dni" name="dni" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.dni.errors}">
             <div *ngIf = "submitted && f.dni.errors" class="invalid-feedback">
               <div *ngIf = "f.dni.errors.required">
                 Falta el dni
@@ -48,8 +48,8 @@
           </div>
 
           <div class="form-group mt-2 mb-2">
-            <label for="numero_colegiado">numero colegiado:</label>
-            <input formControlName="numero_colegiado" placeholder="numero colegiado" name="numero_colegiado" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.numero_colegiado.errors}">
+            <label for="numero_colegiado">Numero colegiado:</label>
+            <input formControlName="numero_colegiado" placeholder="Numero colegiado" name="numero_colegiado" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.numero_colegiado.errors}">
             <div *ngIf = "submitted && f.numero_colegiado.errors" class="invalid-feedback">
               <div *ngIf = "f.numero_colegiado.errors.required">
                 Falta el numero de colegiado
@@ -58,8 +58,8 @@
           </div>
 
           <div class="form-group mt-2 mb-2">
-            <label for="especialidad/otros">especialidad</label>
-            <input formControlName="especialidad" placeholder="especialidad" name="especialidad" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.especialidad.errors}">
+            <label for="especialidad/otros">Especialidad/Otros:</label>
+            <input formControlName="especialidad" placeholder="Especialidad/Otros" name="especialidad" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.especialidad.errors}">
             <div *ngIf = "submitted && f.especialidad.errors" class="invalid-feedback">
               <div *ngIf = "f.especialidad.errors.required">
                 Falta la especialidad o otros datos
@@ -99,7 +99,7 @@
 
           <div class="text-center">
             <div>
-              <button class="appointment-btn scrollto ml-0 mr-2">Crear</button>
+              <button class="appointment-btn scrollto ml-0 mr-2">Registrar</button>
             </div>
           </div>
 
