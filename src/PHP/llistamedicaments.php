@@ -27,7 +27,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 
   $x=0;
 
-  $cesta="SELECT id_medicament, nom, codi_barres FROM medicaments";
+  $cesta="SELECT id_medicament, nom, codi_barres FROM medicaments ORDER BY codi_barres";
 
   $resultados=mysqli_query($conexion, $cesta);
 

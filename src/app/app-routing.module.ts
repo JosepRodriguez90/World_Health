@@ -21,6 +21,10 @@ import { CrearusuariosComponent } from './components/admin/crearusuarios/crearus
 import { CrearmedicaComponent } from './components/admin/crearmedica/crearmedica.component';
 import { ModificarmedicaComponent } from './components/admin/modificarmedica/modificarmedica.component';
 import { ModificarusuarisComponent } from './components/admin/modificarusuaris/modificarusuaris.component';
+import { SoporteComponent } from './components/soporte/soporte.component';
+import { InformacioComponent } from './components/informacio/informacio.component';
+import { BuscadorComponent } from './components/buscador/buscador.component';
+import { InteligenciaComponent } from './components/inteligencia/inteligencia.component';
 
 
 const routes: Routes = [
@@ -46,6 +50,10 @@ const routes: Routes = [
   { path: 'crearmedicaComponent', component: CrearmedicaComponent},
   { path: 'modificarmedicaComponent', component: ModificarmedicaComponent},
   { path: 'modificarusuarisComponent', component: ModificarusuarisComponent},
+  { path: 'soporte', component: SoporteComponent},
+  { path: 'informacio', component: InformacioComponent},
+  { path: 'buscador', component: BuscadorComponent},
+  { path: 'inteligencia', component: InteligenciaComponent},
   { path: '**', redirectTo: 'error404'},
 ];
 

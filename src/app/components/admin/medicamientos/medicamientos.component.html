@@ -6,15 +6,15 @@
 
               <thead>
                   <tr class="text-center table-primary">
+                      <th scope="col">Codigo de barras</th>
                       <th scope="col">Nombre</th>
-                      <th scope="col">Codi de barres</th>
                       <th scope="col">Accion</th>
                   </tr>
               </thead>
               <tbody  *ngFor="let item of medicamentos">
                   <tr class="text-center">
-                      <td><b>{{item[1]}}</b></td>
                       <td><b>{{item[2]}}</b></td>
+                      <td><b>{{item[1]}}</b></td>
 
                       <td>
                         <button class="btn btn-opacity-warning mr-3" (click)="modificar(item)">
