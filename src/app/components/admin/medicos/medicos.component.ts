@@ -52,4 +52,17 @@ export class MedicosComponent implements OnInit {
     this.router.navigate(['crearusuariosComponent']);
   }
 
+
+  modificar(item){
+    console.log(item[0]);
+
+    this.AdminService.createUsuarisupdate(item[0]).subscribe(
+      (data) => {
+        console.log(data);
+        console.log(item);
+    this.router.navigate(['modificarusuarisComponent',item]);
+  });
+
+}
+
 }

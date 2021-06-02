@@ -1,0 +1,121 @@
+<app-adminheader></app-adminheader>
+
+<div class="container d-flex justify-content-center medicamentossss mt-4">
+  <div class="col-3">
+    <div class="row">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-column align-items-center text-center">
+            <img src="../../../assets/pastillas.jpg" alt="foto" class="rounded-circle" width="150">
+            <div class="mt-3">
+              Medicamento
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+    <div class="col-12" *ngFor="let item of medicamentos">
+      <div class="row">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="row">
+
+
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <h6 class="mb-0">Nombre:</h6>
+              </div>
+
+
+              <div class="form-group mt-2 mb-2">
+                <label for="Nombre">{{item[1]}}</label>
+                <input formControlName="Nombre" placeholder="Nuevo nombre medicamiento" name="Nombre" class="form-control" id="Nombre" [ngClass] = "{'is-invalid': submitted && f.Nombre.errors}">
+                <div *ngIf = "submitted && f.Nombre.errors" class="invalid-feedback">
+                  <div *ngIf = "f.Nombre.errors.required">
+                    Falta el nombre
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12">
+                <h6 class="mb-0">Composición:</h6>
+              </div>
+
+
+
+              <div class="form-group mt-2 mb-2">
+                <label for="composicion">{{item[2]}}</label>
+                <input formControlName="composicion" placeholder="Nuevo composicion" name="composicion" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.composicion.errors}">
+                <div *ngIf = "submitted && f.composicion.errors" class="invalid-feedback">
+                  <div *ngIf = "f.composicion.errors.required">
+                    Falta la composicion
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12">
+                <h6 class="mb-0">Codigo de barras:</h6>
+              </div>
+
+
+              <div class="form-group mt-2 mb-2">
+                <label for="codigo">{{item[3]}}</label>
+                <input formControlName="codigo" placeholder="Nuevo codigo de barras" name="codigo" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.codigo.errors}">
+                <div *ngIf = "submitted && f.codigo.errors" class="invalid-feedback">
+                  <div *ngIf = "f.codigo.errors.required">
+                    Falta el codigo de barras
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-12">
+                <h6 class="mb-0">Comentaris:</h6>
+              </div>
+
+
+              <div class="form-group mt-2 mb-2">
+                <label for="comentarios">{{item[4]}}</label>
+                <input formControlName="comentarios" placeholder="Nuevo comentarios" name="comentarios" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.comentarios.errors}">
+                <div *ngIf = "submitted && f.comentarios.errors" class="invalid-feedback">
+                  <div *ngIf = "f.comentarios.errors.required">
+                    Falta el comentario
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <div>
+        <button class="appointment-btn scrollto ml-0 mr-2">Modificar</button>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<app-footer></app-footer>

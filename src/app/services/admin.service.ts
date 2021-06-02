@@ -10,6 +10,8 @@ import { EliminarUsuario } from '../model/EliminarUsuario';
 import { EliminarMedicamiento} from '../model/EliminarMedicamiento';
 import { User} from '../model/User';
 import { Medica} from '../model/Medica';
+import { updateMedica} from '../model/updateMedica';
+import { updateUsuaris} from '../model/updateUsuaris';
 
 
 @Injectable({
@@ -17,18 +19,19 @@ import { Medica} from '../model/Medica';
 })
 export class AdminService {
 
+  loggedUser: Medica = null;
   baseUrl ='http://localhost:8080/';
 
   constructor(private http: HttpClient) {
   }
 
   adminmedicaments(consultarmedicament): Observable<consultarmedicament> {
-    console.log("entre al service llistamedicaments");
+    console.log("entre al service llista medicaments");
     return this.http.post<consultarmedicament>(this.baseUrl + 'llistamedicaments.php', consultarmedicament)
   }
 
   adminusuaris(consultarusuaris): Observable<consultarusuaris> {
-    console.log("entre al service llistausuaris");
+    console.log("entre al service llista usuaris");
     return this.http.post<consultarusuaris>(this.baseUrl + 'llistausuaris.php', consultarusuaris)
   }
 
@@ -53,6 +56,37 @@ export class AdminService {
   createMedica(medica: Medica): Observable<ApiResponse> {
     console.log(medica);
     return this.http.post<ApiResponse>(this.baseUrl + 'insertMedica.php', medica);
+  }
+
+  updateMedica(upmedica: Medica) {
+    return this.http.post<ApiResponse>(this.baseUrl + '/updateMedica.php', upmedica);
+  }
+
+  createMedicaupdate(upmedicaint: updateMedica): Observable<ApiResponse> {
+    console.log(upmedicaint);
+    return this.http.post<ApiResponse>(this.baseUrl + 'insertMedicaupdate.php', upmedicaint);
+  }
+
+  createUsuarisupdate(upusuarisint: updateUsuaris): Observable<ApiResponse> {
+    console.log(upusuarisint);
+    return this.http.post<ApiResponse>(this.baseUrl + 'insertUsuarisupdate.php', upusuarisint);
+  }
+
+  updateUsuaris(upusuaris: User) {
+    console.log(upusuaris);
+    return this.http.post<ApiResponse>(this.baseUrl + '/updateUsuaris.php', upusuaris);
+  }
+
+
+  idmostrarusuaris(idconsultarusuaris): Observable<consultarusuaris> {
+    console.log("entre al service llista usuaris");
+    return this.http.post<consultarusuaris>(this.baseUrl + 'idconsultarusuari.php', idconsultarusuaris)
+  }
+
+
+  idmostrarmedica(idconsultarmedica): Observable<consultarmedicament> {
+    console.log("entre al service llista medicaments");
+    return this.http.post<consultarmedicament>(this.baseUrl + 'idconsultarmedica.php', idconsultarmedica)
   }
 
 }

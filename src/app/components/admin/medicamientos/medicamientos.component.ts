@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ApiResponse } from '../../../model/api-response';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { AdminService } from '../../../services/admin.service';
 import { consultarmedicament } from '../../../model/consultarmedicament';
+import { Medica } from 'src/app/model/Medica';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-medicamientos',
@@ -46,7 +48,20 @@ export class MedicamientosComponent implements OnInit {
   }
 
   crear(){
-    this.router.navigate(['crearmedicaComponent']);
+    this.router.navigate(['crearmedicaComponent',]);
   }
 
+  modificar(item){
+    console.log(item[0]);
+
+    this.AdminService.createMedicaupdate(item[0]).subscribe(
+      (data) => {
+        console.log(data);
+        console.log(item);
+    this.router.navigate(['modificarmedicaComponent',item]);
+  });
+
 }
+
+}
+

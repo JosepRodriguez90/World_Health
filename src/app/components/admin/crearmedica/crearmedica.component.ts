@@ -10,6 +10,7 @@ import { AdminService } from '../../../services/admin.service';
   styleUrls: ['./crearmedica.component.css']
 })
 export class CrearmedicaComponent implements OnInit {
+  static medicamentos: unknown[];
 
   constructor(private formBuilder: FormBuilder,
   private router: Router,

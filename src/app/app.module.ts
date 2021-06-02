@@ -28,6 +28,8 @@ import { MedicosComponent } from './components/admin/medicos/medicos.component';
 import { AdminhomeComponent } from './components/admin/adminhome/adminhome.component';
 import { CrearusuariosComponent } from './components/admin/crearusuarios/crearusuarios.component';
 import { CrearmedicaComponent } from './components/admin/crearmedica/crearmedica.component';
+import { ModificarmedicaComponent } from './components/admin/modificarmedica/modificarmedica.component';
+import { ModificarusuarisComponent } from './components/admin/modificarusuaris/modificarusuaris.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { CrearmedicaComponent } from './components/admin/crearmedica/crearmedica
     MedicosComponent,
     AdminhomeComponent,
     CrearusuariosComponent,
-    CrearmedicaComponent
+    CrearmedicaComponent,
+    ModificarmedicaComponent,
+    ModificarusuarisComponent
   ],
   imports: [
     BrowserModule,
