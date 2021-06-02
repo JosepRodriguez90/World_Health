@@ -659,7 +659,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'Albert',
-    'Zamorano',
+    'Zamorano Manzano',
     654667788,
     'azamorano@doctor.com',
     '47980449J',
@@ -683,7 +683,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'Josep',
-    'Liebana',
+    'Liebana Nuñez',
     616775544,
     'jliebana@doctor.com',
     '57680119A',
@@ -707,7 +707,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'Marc',
-    'Alba',
+    'Alba Perez',
     678116600,
     'malba@doctor.com',
     '29789559D',
@@ -731,7 +731,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'Jordi',
-    'Tortosa',
+    'Tortosa Gutierrez',
     601997823,
     'jtortosa@doctor.com',
     '47765762T',
@@ -755,7 +755,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'Susana',
-    'Cordero',
+    'Cordero De la Cruz',
     623789977,
     'scordero@doctor.com',
     '76275626Z',
@@ -778,7 +778,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'Sergi',
-    'Obis',
+    'Obis Varela',
     654461989,
     'sobis@farmaceutic.com',
     '40732750A',
@@ -801,7 +801,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'David',
-    'Valdivia',
+    'Valdivia Carreras',
     773356040,
     'dvaldivia@farmaceutic.com',
     '32262634M',
@@ -823,7 +823,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'Cristian',
-    'Suris',
+    'Suris Monsonis',
     681529240,
     'csuris@farmaceutic.com',
     '19726850A',
@@ -845,7 +845,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'Alfonso',
-    'Montero',
+    'Montero Asimov',
     361786620,
     'amontero@farmaceutic.com',
     '79804434T',
@@ -867,7 +867,7 @@ INSERT INTO usuari (
 )
 VALUES(
     'Rosa',
-    'Garcia',
+    'Garcia Hiroshi',
     465619990,
     'rgarcia@farmaceutic.com',
     '20156710Q',

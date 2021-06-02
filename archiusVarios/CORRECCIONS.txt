@@ -1,0 +1,16 @@
+V-ficar iconos
+V-treure la decoracio dels <a> amb text-decoration-none
+P-que el usuari pugui cambiar els seus camps menos nom,cognoms, dni i numero de colegiat i tobligui a ficar doble contraseña
+V-ficar boto a usuari per cambiar de foto(no funcional)
+V-el boto de support que et porte a support
+V-botons de tornar a tots els subapartats exemple(support, crear o modificar al admin etc)
+V-fer la informacio
+P-fer el buscador de medicaments
+P-fer la IA
+V-ficar el codi de barres a la esquerra del tot, com es un id unic sera el millor per identificar rapidament
+V-(idea) fer que el modificar usuari tingui la mateixa aparença que el perfil de usuari pero amb els camps modificables i menos els favoritos
+P-al crear i modificar ficar doble contraseña
+V-fer la aparença del registrar semblant al modificar, recuadre etc
+P-fer validadors tant de crear com de modificar
+P-afegir els camps que falten de medicaments
+V-ficar la llista de medicaments ordenat per el codi de barres aixi ajude a la busqueda
