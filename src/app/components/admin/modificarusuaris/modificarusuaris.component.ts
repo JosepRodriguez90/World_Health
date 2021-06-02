@@ -93,7 +93,7 @@ export class ModificarusuarisComponent implements OnInit {
 
             Swal.fire({
               icon: 'success',
-              title: 'S´ha registrat correctament',
+              title: 'Se ha modificado correctamente',
               showConfirmButton: false,
               timer: 1500
             }).then((result) => {

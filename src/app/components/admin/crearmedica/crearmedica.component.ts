@@ -58,7 +58,7 @@ onSubmit() {
         if (data) {
           Swal.fire({
             icon: 'success',
-            title: 'S´ha registrat correctament',
+            title: 'Se ha registrado correctamente',
             showConfirmButton: false,
             timer: 1500
           }).then((result) => {
