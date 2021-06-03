@@ -10,6 +10,7 @@ export class IndexComponent implements OnInit {
 
   constructor(public translate: TranslateService ) {
     this.translate.addLangs(['es', 'en']);
+        this.translate.setDefaultLang('es');
   }
 
   ngOnInit(): void {

@@ -16,8 +16,8 @@ export class EsloginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private apiService: UsuariosService
-  ) { }
+    private apiService: UsuariosService,
+  ) {     }
 
 
   loginForm: FormGroup;

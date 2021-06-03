@@ -36,6 +36,7 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
 import { InteligenciaComponent } from './components/inteligencia/inteligencia.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { IdiomaComponent } from './components/idioma/idioma.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/traductor/', '.json');
@@ -69,7 +70,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SoporteComponent,
     InformacioComponent,
     BuscadorComponent,
-    InteligenciaComponent
+    InteligenciaComponent,
+    IdiomaComponent,
   ],
   imports: [
     BrowserModule,

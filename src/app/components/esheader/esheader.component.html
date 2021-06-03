@@ -1,4 +1,5 @@
-  <header id="header">
+ <app-idioma></app-idioma>
+ <header id="header">
     <div class="container d-flex align-items-center">
       <a [routerLink]="['../index']" routerLinkActive="active" class="nav-link scrollto">
       <img class="me-auto" src="/assets/logo_wh.jpg" width="300">
@@ -19,11 +20,11 @@
               <li><a [routerLink]="['../inindex']" (click)="idioma()" value="en" name="english" routerLinkActive="active" class="nav-link scrollto">Inglés</a></li>
             </ul> -->
           <!-- </li> -->
-          <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
+          <!-- <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
             <option *ngFor="let lang of langs" [value]="lang">
               {{lang}}
             </option>
-          </select>
+          </select> -->
         </ul>
 
         <i class="bi bi-list mobile-nav-toggle"></i>

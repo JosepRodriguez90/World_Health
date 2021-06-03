@@ -28,7 +28,7 @@ export class ModificarmedicaComponent implements OnInit {
 
 
     idmedicament: string;
-    medicamentos;
+    medicamentos: any[][];
     medica;
 
     ngOnInit(): void {
