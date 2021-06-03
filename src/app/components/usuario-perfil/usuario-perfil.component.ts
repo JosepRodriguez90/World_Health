@@ -4,6 +4,8 @@ import { ApiResponse } from '../../model/api-response';
 import { Router } from '@angular/router';
 import { Usuarios } from '../../model/usuarios';
 import { environment } from 'src/environments/environment';
+import { AdminService } from '../../services/admin.service';
+import { updateUsuaris } from 'src/app/model/updateUsuaris';
 
 @Component({
   selector: 'app-usuario-perfil',
@@ -16,6 +18,7 @@ export class UsuarioPerfilComponent implements OnInit {
 
   constructor(
     private apiService: UsuariosService,
+    private AdminService: AdminService,
     private router : Router
   ) { }
 

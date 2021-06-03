@@ -6,6 +6,7 @@ import { AdminService } from '../../../services/admin.service';
 import { User } from 'src/app/model/User';
 import { updateUsuaris } from 'src/app/model/updateUsuaris';
 import { consultarusuaris } from '../../../model/consultarusuaris';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-modificarusuaris',
@@ -26,14 +27,18 @@ export class ModificarusuarisComponent implements OnInit {
     usuariossup;
 
     idusuari: string;
-    usuarios;
+    usuarios: any[][];
     usu;
+    correo: any;
 
   ngOnInit(): void {
+
+    this.correo = environment.correu;
 
     this.addForm = this.formBuilder.group({
       id: [],
       password: ['', Validators.required],
+      password2: ['', Validators.required],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       telefon: ['', Validators.required],
@@ -71,6 +76,15 @@ export class ModificarusuarisComponent implements OnInit {
     }
   }
 
+  mostrarContrasena2() {
+    let tipo: any = document.getElementById("password2");
+    if (tipo.type == "password") {
+      tipo.type = "text";
+    } else {
+      tipo.type = "password";
+    }
+  }
+
 
   onSubmit() {
     this.submitted = true;
@@ -81,6 +95,14 @@ export class ModificarusuarisComponent implements OnInit {
         icon: 'error',
         title: 'Error',
         text: 'Los datos no son correctos.',
+      })
+      return;
+    }
+    else if (this.addForm.value.password != this.addForm.value.password2) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Las contraseñas no coinciden.',
       })
       return;
     }
@@ -97,7 +119,13 @@ export class ModificarusuarisComponent implements OnInit {
               showConfirmButton: false,
               timer: 1500
             }).then((result) => {
-              this.router.navigate(['medicosComponent']);
+              if(this.correo=="admin@admin.com"){
+                this.router.navigate(['medicosComponent']);
+              }
+              else{
+                this.router.navigate(['../../usuario-perfil']);
+              }
+
             });
 
 

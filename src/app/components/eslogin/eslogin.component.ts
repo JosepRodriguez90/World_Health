@@ -58,12 +58,12 @@ export class EsloginComponent implements OnInit {
 
     if (this.loginForm.invalid) {
       this.invalidLogin = true;
-      console.log("Login invalid");
+      console.log("Login invalido");
 
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Les dades no son correctes.',
+        text: 'Los datos no son correctos.',
       })
       return;
     }

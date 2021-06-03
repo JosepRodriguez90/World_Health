@@ -1,3 +1,16 @@
 h6{
   font-weight: bold;
 }
+
+div.container{
+  margin-top: 2%;
+}
+
+.row{
+  margin: 5px;
+}
+
+.login{
+  margin-left:28%;
+}
+

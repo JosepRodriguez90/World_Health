@@ -86,7 +86,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Nom:</h6>
+              <h6 class="mb-0">Nombre:</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.nom}}
@@ -95,7 +95,7 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Cognoms:</h6>
+              <h6 class="mb-0">Apellidos:</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.cognom}}
@@ -104,7 +104,7 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Telefon:</h6>
+              <h6 class="mb-0">Telefono:</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.telefon}}
@@ -113,7 +113,7 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Correu:</h6>
+              <h6 class="mb-0">Correo:</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.email}}
@@ -131,7 +131,7 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Numero de Colegiat:</h6>
+              <h6 class="mb-0">Numero de Colegiado:</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.num_colegiat}}
@@ -139,7 +139,7 @@
           </div>
           <hr>
           <div class="row">
-            <a class="text-center col-2 mt-2 text-decoration-none appointment-btn scrollto ml-0" routerLink="" routerLinkActive="active">Modificar</a>
+            <a class="text-center col-2 mt-2 text-decoration-none appointment-btn scrollto ml-0" [routerLink]="['usuario-perfil']" routerLinkActive="active">Modificar</a>
           </div>
         </div>
       </div>

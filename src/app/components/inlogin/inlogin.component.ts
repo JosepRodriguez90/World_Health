@@ -19,6 +19,7 @@ export class InloginComponent implements OnInit {
     private apiService: UsuariosService
   ) { }
 
+
   loginForm: FormGroup;
   invalidLogin: boolean = false;
   submitted: boolean = false;
@@ -57,12 +58,12 @@ export class InloginComponent implements OnInit {
 
     if (this.loginForm.invalid) {
       this.invalidLogin = true;
-      console.log("Login invalid");
+      console.log("Login fail");
 
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Dades are not correct.',
+        text: 'The data is incorrect.',
       })
       return;
     }
@@ -85,7 +86,7 @@ export class InloginComponent implements OnInit {
         if(environment.correu=='admin@admin.com'){
           this.router.navigate(['adminhomeComponent']);
         }else{
-          this.router.navigate(['usuario-perfil']);
+          this.router.navigate(['in-usuario-perfil']);
         }
 
       }
@@ -109,7 +110,7 @@ export class InloginComponent implements OnInit {
         Swal.fire({
           icon: 'error',
           title: 'Error',
-          text: 'Username does not exist.',
+          text: 'The user does not exist.',
         })
         return;
       }
@@ -117,5 +118,3 @@ export class InloginComponent implements OnInit {
   }
 
 }
-
-
