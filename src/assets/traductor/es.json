@@ -1,0 +1,55 @@
+{
+   "adminhome": {
+     "Bienvenido": "Bienvenido Administrador"
+    },
+
+    "header": {
+      "sesion": "Iniciar sesion",
+      "inicio": "Inicio",
+      "sobre": "Sobre Health World",
+      "contact": "Contactar"
+    },
+
+
+    "index": {
+      "titulo": "Bienvenido a Health World",
+      "subtitulo": "Somos una pagina web para consultar medicamientos",
+      "sobre": "Sobre Nosotros",
+      "descripcio": "Nos queremos diferenciar del resto ofreciendo una experiencia única de busqueda de medicamentos mejorada y comoda con una IA de ultima generación.",
+      "btninfo": "Mas información ",
+      "encontrar": "Encontrar tus medicamentos online",
+      "encontrardesc": "Health World te ayuda a buscar y elegir el mejor medicamento para cada situacion y paciente.",
+      "comentarios": "Comentarios con otros profesionales medicos",
+      "comentariosdesc": "Health World te permite comentar los medicamentos para que otros profesionales puedan ver en que situaciones se han usado.",
+      "guardar": "Guarda tus recetas medicas a favoritos",
+      "guardardesc": "Health World te permite crear una lista de medicamentos mas usados para que esten siempre a tu alcance."
+    },
+
+    "sobrenosotros": {
+      "titulo": "Sobre Health World",
+      "subtitulo": "El proyecto Healthworld se plantea como una herramienta que ofrece a los profesionales de la Salud para poder gestionar búsquedas de medicamentos con una tecnología innovadora dentro del sector. ",
+      "nuestra": "Nuestra marca personal",
+      "nuestradesc": "Gracias al desarrollo de una IA que facilitará realizar búsquedas con diferentes filtros para dar los mejores resultados, junto con una experiencia enriquecedora en la web hacen de Healthworld un buscador de medicamentos único. ",
+      "sobre": "Sobre nosotros",
+      "sobredesc": "Este proyecto se ajusta al espíritu y primordial requisito de la empresa y nuestro equipo de profesionales de desarrollar herramientas y aplicaciones para facilitar la vida a las personas. ",
+      "proyecto": "Nuestro proyecto de futuro en medicamentos",
+      "proyetcodesc": "Esta aplicación web puede llevarnos a desarrollar futuras aplicaciones y herramientas dentro de este sector para cubrir la gran demanda de atención y profesionalidad a través de la tecnología, que en el entorno actual de sociedad ha demostrado ser de gran ayuda. "
+    },
+
+    "contactar": {
+      "titulo":"CONTACTA CON NOSOTROS",
+      "subtitulo": "Quieres mas información? Ponte en contacto con nosotros!",
+      "localizacion": "Localización:",
+      "localizaciondesc": "Complejo de La Caparrella a Lleida, CEEI 3 3.3",
+      "correodesc": "support@healthworld.com",
+      "telefono": "+34 619111225",
+      "correo": "Correo:",
+      "llamanos": "Llamanos:",
+      "enviar": "Enviar",
+      "nombre": "Nombre",
+      "email": "Email",
+      "asunto": "asunto",
+      "mensaje": "Mensaje"
+    }
+
+}

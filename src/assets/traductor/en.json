@@ -1,0 +1,56 @@
+{
+  "adminhome": {
+    "Bienvenido": "Welcome Administrator"
+   },
+
+   "header": {
+     "sesion": "Log in",
+     "inicio": "Home",
+     "sobre": "About Health World",
+     "contact": "Contact"
+   },
+
+   "index": {
+    "titulo": "Welcome to health World",
+    "subtitulo": "We are a website to consult medications",
+    "sobre": "About us",
+    "descripcio": "We want to be different from the rest by offering a unique experience in a upgraded and easy medical search with a state-of-the-art A.I.",
+    "btninfo": "More information ",
+    "encontrar": "Search your medication online",
+    "encontrardesc": "Health World helps you to search and find the best medication for every kind of situation and patient.",
+    "comentarios": "Commentary with other professional doctors",
+    "comentariosdesc": "Health World te permite comentar los medicamentos para que otros profesionales puedan ver en que situaciones se han usado.",
+    "guardar": "Save all your medical recipes",
+    "guardardesc": "Health World allows you to create lists with all of your most searched medications so that they are always at hand."
+  },
+
+  "sobrenosotros": {
+    "titulo": "About Health World",
+    "subtitulo": "The Healthworld project is proposed as a tool that offers Health professionals to be able to manage drug searches with innovative technology within the sector.  ",
+    "nuestra": "Our personal brand",
+    "nuestradesc": "Thanks to the development of an AI that will facilitate searches with different filters to give the best results, along with an enriching experience on the web make Healthworld a unique drug finder. ",
+    "sobre": "About us",
+    "sobredesc": "This project conforms to the spirit and primary requirement of the company and our team of professionals to develop tools and applications to make life easier for people. ",
+    "proyecto": "Our future project in medicines",
+    "proyetcodesc": "This web application can lead us to develop future applications and tools within this sector to meet the great demand for attention and professionalism through technology, which in today's society environment has proven to be of great help. "
+  },
+
+  "contactar": {
+    "titulo":"CONTACT US",
+    "subtitulo": "Do you want more information? Get in touch with us!",
+    "localizacion": "Location:",
+    "localizaciondesc": "Complejo de La Caparrella a Lleida, CEEI 3 3.3",
+    "correodesc": "support@healthworld.com",
+    "telefono": "+34 619111225",
+    "correo": "Email:",
+    "llamanos": "Call us:",
+    "enviar": "Send",
+    "nombre": "Name",
+    "email": "Email",
+    "asunto": "Subject",
+    "mensaje": "Message"
+  }
+}
+
+
+

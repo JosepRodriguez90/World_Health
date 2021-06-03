@@ -9,21 +9,26 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0" style="padding-left: 350px;">
         <ul>
-          <li><a [routerLink]="['../index']" routerLinkActive="active" class="nav-link scrollto">Inicio</a></li>
-          <li><a [routerLink]="['../sobrehealthworld']" routerLinkActive="active" class="nav-link scrollto">Sobre Health World</a></li>
+          <li><a [routerLink]="['../index']" routerLinkActive="active" class="nav-link scrollto">{{ "header.inicio" | translate}}</a></li>
+          <li><a [routerLink]="['../sobrehealthworld']" routerLinkActive="active" class="nav-link scrollto">{{ "header.sobre" | translate}}</a></li>
 
-          <li><a [routerLink]="['../contactar']" routerLinkActive="active" class="nav-link scrollto">Contactar</a></li>
-          <li class="dropdown"><a class="text-decoration-none" href="#"><span>Idioma</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a [routerLink]="['../index']" routerLinkActive="active" class="nav-link scrollto">Español</a></li>
-              <li><a [routerLink]="['../inindex']" routerLinkActive="active" class="nav-link scrollto">Inglés</a></li>
-            </ul>
-          </li>
+          <li><a [routerLink]="['../contactar']" routerLinkActive="active" class="nav-link scrollto">{{ "header.contact" | translate}}</a></li>
+          <!-- <li class="dropdown"><a class="text-decoration-none" href="#"><span>Idioma</span> <i class="bi bi-chevron-down"></i></a> -->
+            <!-- <ul>
+              <li><a [routerLink]="['../index']" (click)="idioma()" value="es" name="español" routerLinkActive="active" class="nav-link scrollto">Español</a></li>
+              <li><a [routerLink]="['../inindex']" (click)="idioma()" value="en" name="english" routerLinkActive="active" class="nav-link scrollto">Inglés</a></li>
+            </ul> -->
+          <!-- </li> -->
+          <select class="form-select" #langSelect (change)="changeLang(langSelect.value)">
+            <option *ngFor="let lang of langs" [value]="lang">
+              {{lang}}
+            </option>
+          </select>
         </ul>
 
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a [routerLink]="['../eslogin']" routerLinkActive="active" class="text-decoration-none appointment-btn scrollto"><span class="d-none d-md-inline">Iniciar sesion</span></a>
+      <a [routerLink]="['../eslogin']" routerLinkActive="active" class="text-decoration-none appointment-btn scrollto"><span class="d-none d-md-inline">{{ "header.sesion" | translate}}</span></a>
     </div>
   </header><!-- End Header -->

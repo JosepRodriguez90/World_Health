@@ -2,8 +2,8 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container">
-      <h1>Bienvenido a Health World</h1>
-      <h2>Somos una pagina web para consultar medicamientos</h2>
+      <h1>{{ "index.titulo" | translate}}</h1>
+      <h2>{{ "index.subtitulo" | translate}}</h2>
     </div>
   </section><!-- End Hero -->
   <main id="main" >
@@ -15,13 +15,12 @@
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
-              <h3>Sobre Nosotros</h3>
+              <h3>{{ "index.sobre" | translate}}</h3>
               <p>
-                Nos queremos diferenciar del resto ofreciendo una experiencia única de
-                busqueda de medicamentos mejorada y comoda con una IA de ultima generación.
+                {{ "index.descripcio" | translate}}
               </p>
               <div class="text-center">
-                <a [routerLink]="['../sobrehealthworld']" routerLinkActive="active" class="text-decoration-none more-btn">Mas informacion <i class="bx bx-chevron-right"></i></a>
+                <a [routerLink]="['../sobrehealthworld']" routerLinkActive="active" class="text-decoration-none more-btn">{{ "index.btninfo" | translate}}<i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -31,22 +30,22 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="fa fa-search"></i>
-                    <h4>Encontrar tus medicamentos online</h4>
-                    <p>Health World te ayuda a buscar y elegir el mejor medicamento para cada situacion y paciente.</p>
+                    <h4>{{ "index.encontrar" | translate}}</h4>
+                    <p>{{ "index.encontrardesc" | translate}}</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="fa fa-user"></i>
-                    <h4>Comentarios con otros profesionales medicos</h4>
-                    <p>Health World te permite comentar los medicamentos para que otros profesionales puedan ver en que situaciones se han usado.</p>
+                    <h4>{{ "index.comentarios" | translate}}</h4>
+                    <p>{{ "index.comentariosdesc" | translate}}</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="fa fa-heart"></i>
-                    <h4>Guarda tus recetas medicas a favoritos</h4>
-                    <p>Health World te permite crear una lista de medicamentos mas usados para que esten siempre a tu alcance.</p>
+                    <h4>{{ "index.guardar" | translate}}</h4>
+                    <p>{{ "index.guardardesc" | translate}}</p>
                   </div>
                 </div>
               </div>

@@ -5,8 +5,8 @@
     <div class="container">
 
       <div class="section-title">
-        <h2>CONTACTA CON NOSOTROS</h2>
-        <p>Quieres mas información? Ponte en contacto con nosotros!</p>
+        <h2>{{ "contactar.titulo" | translate}}</h2>
+        <p>{{ "contactar.subtitulo" | translate}}</p>
       </div>
     </div>
 
@@ -20,18 +20,18 @@
         <div class="col-lg-4">
           <div class="info">
             <div class="address">
-              <h4>Localización:</h4>
-              <p>Complejo de La Caparrella a Lleida, CEEI 3 3.3</p>
+              <h4>{{ "contactar.localizacion" | translate}}</h4>
+              <p>{{ "contactar.localizaciondesc" | translate}}</p>
             </div>
 
             <div class="email">
-              <h4>Correo:</h4>
-              <p>support@healthworld.com</p>
+              <h4>{{ "contactar.correo" | translate}}</h4>
+              <p>{{ "contactar.correodesc" | translate}}</p>
             </div>
 
             <div class="phone">
-              <h4>Llamanos:</h4>
-              <p>+34 619111225</p>
+              <h4>{{ "contactar.llamanos" | translate}}</h4>
+              <p>{{ "contactar.telefono" | translate}}</p>
             </div>
 
           </div>
@@ -43,20 +43,20 @@
           <form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="row">
               <div class="col-md-6 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre:" required>
+                <input type="text" name="name" class="form-control" id="name" placeholder="{{ 'contactar.nombre' | translate }}" required>
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Email:" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="{{ 'contactar.email' | translate }}" required>
               </div>
             </div>
             <div class="form-group mt-3">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto:" required>
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="{{ 'contactar.asunto' | translate }}" required>
             </div>
             <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Mensaje:" required></textarea>
+              <textarea class="form-control" name="message" rows="5" placeholder="{{ 'contactar.mensaje' | translate }}" required></textarea>
             </div>
 
-            <span type="button"  onClick="mensaje()" class="appointment-btn scrollto ml-0">Enviar</span>
+            <span type="button"  onClick="mensaje()" class="appointment-btn scrollto ml-0">{{ "contactar.enviar" | translate}}</span>
 
           </form>
 

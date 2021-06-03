@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient  } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +34,12 @@ import { SoporteComponent } from './components/soporte/soporte.component';
 import { InformacioComponent } from './components/informacio/informacio.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { InteligenciaComponent } from './components/inteligencia/inteligencia.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/traductor/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -71,6 +77,13 @@ import { InteligenciaComponent } from './components/inteligencia/inteligencia.co
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [
     UsuariosService,
