@@ -6,6 +6,7 @@ import { AdminService } from '../../../services/admin.service';
 import { consultarmedicament } from '../../../model/consultarmedicament';
 import { Medica } from 'src/app/model/Medica';
 import { FormGroup } from '@angular/forms';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-medicamientos',
@@ -17,9 +18,11 @@ export class MedicamientosComponent implements OnInit {
   medicamentos;
   medica;
 
-  constructor( private AdminService: AdminService,
+  constructor(
+    public translate: TranslateService,
+    private AdminService: AdminService,
     private router: Router,
-    ) { }
+    ) {  this.translate.addLangs(['es', 'en']); }
 
   ngOnInit(): void {
     this.idmedicament = localStorage.getItem('idmedicament')

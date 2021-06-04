@@ -6,10 +6,10 @@
 
               <thead>
                   <tr class="text-center table-primary">
-                      <th scope="col">Numero colegiado</th>
-                      <th scope="col">Apellido</th>
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Accion</th>
+                      <th scope="col">{{ "usuarios.num_colegiado" | translate}}</th>
+                      <th scope="col">{{ "usuarios.apellido" | translate}}</th>
+                      <th scope="col">{{ "usuarios.nombre" | translate}}</th>
+                      <th scope="col">{{ "usuarios.accion" | translate}}</th>
                   </tr>
               </thead>
               <tbody  *ngFor="let item of usuarios">
@@ -20,10 +20,10 @@
 
                       <td>
                         <button class="btn btn-opacity-warning mr-3" (click)="modificar(item)">
-                          Modificar
+                          {{ "usuarios.modificar" | translate}}
                         </button>
                         <button class="btn btn-opacity-danger" (click)="eliminar(item)">
-                          Borrar
+                          {{ "usuarios.borrar" | translate}}
                         </button>
                       </td>
 
@@ -34,7 +34,7 @@
           </table>
 
             <button class="appointment-btn scrollto ml-0 mr-2" (click)="crear()">
-              Registrar
+              {{ "usuarios.registrar" | translate}}
             </button>
 
       </div>

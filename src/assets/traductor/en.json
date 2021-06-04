@@ -20,6 +20,31 @@
      "contact": "Contact"
    },
 
+   "headeradmin": {
+    "usuarios": "Manage Users",
+    "medicamientos": "Manage Medications",
+    "sesion":  "Sign off"
+  },
+
+  "usuarios": {
+    "num_colegiado": "Collegiate number",
+    "apellido": "Surname",
+    "nombre": "Name",
+    "accion": "Action",
+    "registrar": "Register",
+    "modificar": "Modify",
+    "borrar": "Delete"
+  },
+
+  "medicamientos": {
+    "codigo": "Barcode",
+    "nombre": "Name",
+    "accion": "Action",
+    "registrar": "Register",
+    "modificar": "Modify",
+    "borrar": "Delete"
+  },
+
    "login": {
     "sesion": "Log in",
     "correo": "Email:",
@@ -58,7 +83,7 @@
     "localizacion": "Location:",
     "localizaciondesc": "Complejo de La Caparrella a Lleida, CEEI 3 3.3",
     "correodesc": "support@healthworld.com",
-    "telefono": "+34 619111225",
+    "telefono": "+34 619768410",
     "correo": "Email:",
     "llamanos": "Call us:",
     "enviar": "Send",

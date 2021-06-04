@@ -19,6 +19,31 @@
       "contact": "Contactar"
     },
 
+    "headeradmin": {
+      "usuarios": "Gestionar Usuarios",
+      "medicamientos": "Gestionar Medicamientos",
+      "sesion":  "Cerrar Sesion"
+    },
+
+    "usuarios": {
+      "num_colegiado": "Número colegiado",
+      "apellido": "Apellido",
+      "nombre": "Nombre",
+      "accion": "Acción",
+      "registrar": "Registrar",
+      "modificar": "Modificar",
+      "borrar": "Borrar"
+    },
+
+    "medicamientos": {
+      "codigo": "Codigo de barras",
+      "nombre": "Nombre",
+      "accion": "Acción",
+      "registrar": "Registrar",
+      "modificar": "Modificar",
+      "borrar": "Borrar"
+    },
+
     "login": {
       "sesion": "Iniciar sesion",
       "correo": "Correo:",

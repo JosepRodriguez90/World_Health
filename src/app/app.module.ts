@@ -11,12 +11,6 @@ import { ContactarComponent } from './components/contactar/contactar.component';
 import { EsheaderComponent } from './components/esheader/esheader.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EsloginComponent } from './components/eslogin/eslogin.component';
-import { InindexComponent } from './components/inindex/inindex.component';
-import { AbouthealthworldComponent } from './components/abouthealthworld/abouthealthworld.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { InheaderComponent } from './components/inheader/inheader.component';
-import { InloginComponent } from './components/inlogin/inlogin.component';
-
 import { UsuariosService } from './services/usuarios.service';
 import { AdminService } from './services/admin.service';
 import { Error404Component } from './components/error404/error404.component';
@@ -51,11 +45,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     EsheaderComponent,
     FooterComponent,
     EsloginComponent,
-    InindexComponent,
-    AbouthealthworldComponent,
-    ContactComponent,
-    InheaderComponent,
-    InloginComponent,
     Error404Component,
     UsuarioPerfilComponent,
     UsuarioHeaderComponent,

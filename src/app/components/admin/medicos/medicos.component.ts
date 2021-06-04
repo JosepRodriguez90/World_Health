@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { AdminService } from '../../../services/admin.service';
 import { consultarusuaris } from '../../../model/consultarusuaris';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -16,9 +17,10 @@ export class MedicosComponent implements OnInit {
   usuarios;
   usu;
 
-  constructor( private AdminService: AdminService,
+  constructor( public translate: TranslateService,
+    private AdminService: AdminService,
     private router: Router,
-    ) { }
+    ) { this.translate.addLangs(['es', 'en']) }
 
   ngOnInit(): void {
     this.idusuari = localStorage.getItem('idusuari')
