@@ -1,6 +1,15 @@
 {
+
+  "formreactivo": {
+    "faltaemail": "Falta el correo",
+    "nocorreo": "Esto no es un correo electronico",
+    "faltapass": "Falta la contraseña",
+    "passminim3chr": "Contraseña demasiado corta (minimo 3 caracteres)"
+  },
+
    "adminhome": {
-     "Bienvenido": "Bienvenido Administrador"
+     "Bienvenido": "Bienvenido Administrador",
+     "subtitulo": "Aquí puede gestionar los medicamientos y los usuarios"
     },
 
     "header": {
@@ -10,6 +19,12 @@
       "contact": "Contactar"
     },
 
+    "login": {
+      "sesion": "Iniciar sesion",
+      "correo": "Correo:",
+      "contrasenya": "Contraseña:",
+      "volver": "Volver al Inicio"
+    },
 
     "index": {
       "titulo": "Bienvenido a Health World",

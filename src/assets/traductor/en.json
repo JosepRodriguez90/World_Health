@@ -1,6 +1,16 @@
 {
+
+  "formreactivo": {
+    "faltaemail": "Email is missing",
+    "nocorreo": "This is not an email",
+    "faltapass": "Password is missing",
+    "passminim3chr": "Password to short (minim 3 characters)"
+  },
+
   "adminhome": {
-    "Bienvenido": "Welcome Administrator"
+    "Bienvenido": "Welcome Administrator",
+    "subtitulo": "Here you can manage medications and users",
+    "sesion": "Sign off"
    },
 
    "header": {
@@ -9,6 +19,13 @@
      "sobre": "About Health World",
      "contact": "Contact"
    },
+
+   "login": {
+    "sesion": "Log in",
+    "correo": "Email:",
+    "contrasenya": "Password:",
+    "volver": "Back to Home"
+  },
 
    "index": {
     "titulo": "Welcome to health World",
@@ -50,6 +67,8 @@
     "asunto": "Subject",
     "mensaje": "Message"
   }
+
+
 }
 
 

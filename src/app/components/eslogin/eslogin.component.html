@@ -8,29 +8,29 @@
         <a routerLink="../index" routerLinkActive="active" ><img src="../../../assets/logo_wh.jpg" width="200" alt="alumne"></a>
       </div>
 
-      <h2 class="text-center text-dark mt-5">Iniciar Sesion</h2>
+      <h2 class="text-center text-dark mt-5">{{ "login.sesion" | translate}}</h2>
 
       <form [formGroup]='loginForm' (ngSubmit)="onSubmit()">
 
         <div class="form-group">
-          <label class="text-dark" for="correu">Correo electronico:</label>
+          <label class="text-dark" for="correu">{{ "login.correo" | translate}}</label>
           <div class="input-group mb-3">
             <input type="email" class="form-control" formControlName="correu" id="correu" [ngClass] = "{'is-invalid': (submitted && f.correu.errors)}" required maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             <div *ngIf = "submitted && f.correu.errors" class="invalid-feedback">
               <div *ngIf = "f.correu.errors.required">
-                Falta el correo
+                {{ "formreactivo.faltaemail" | translate}}
               </div>
             </div>
             <div *ngIf = "validadorsPetits && f.correu.errors" class="invalid-feedback">
               <div *ngIf = "f.correu.errors.pattern">
-                Esto no es un correo electronico
+                {{ "formreactivo.nocorreo" | translate}}
               </div>
             </div>
           </div>
         </div>
 
         <div class="form-group">
-          <label class="text-dark" for="contrasenya">Contraseña:</label>
+          <label class="text-dark" for="contrasenya">{{ "login.contrasenya" | translate}}</label>
           <div class="input-group mb-3">
             <input type="password" class="form-control" formControlName="contrasenya" id="contrasenya" [ngClass] = "{'is-invalid': (submitted && f.contrasenya.errors)}" required maxlength="20" minlength="3">
             <div class="input-group-append">
@@ -38,12 +38,12 @@
             </div>
             <div *ngIf = "submitted && f.contrasenya.errors" class="invalid-feedback">
               <div *ngIf = "f.contrasenya.errors.required">
-                Falta la contraseña
+                {{ "formreactivo.faltapass" | translate}}
               </div>
             </div>
             <div *ngIf = "validadorsPetits && f.contrasenya.errors" class="invalid-feedback">
               <div *ngIf = "f.contrasenya.errors.minlength">
-                Contraseña demasiado corta (minimo 3 caracteres)
+                {{ "formreactivo.passminim3chr" | translate}}
               </div>
             </div>
           </div>
@@ -51,10 +51,10 @@
 
         <div class="text-center">
           <div>
-            <button class="appointment-btn scrollto ml-0">Iniciar sesion</button>
+            <button class="appointment-btn scrollto ml-0">{{ "login.sesion" | translate}}</button>
           </div>
           <div>
-            <a [routerLink]="['../index']" routerLinkActive="active" class="mt-2 text-decoration-none btn-secondary appointment-btn scrollto ml-0">Volver al Inicio</a>
+            <a [routerLink]="['../index']" routerLinkActive="active" class="mt-2 text-decoration-none btn-secondary appointment-btn scrollto ml-0">{{ "login.volver" | translate}}</a>
           </div>
         </div>
       </form>

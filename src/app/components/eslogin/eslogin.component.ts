@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { ApiResponse } from '../../model/api-response';
 import { environment } from 'src/environments/environment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-eslogin',
@@ -17,7 +18,8 @@ export class EsloginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     private apiService: UsuariosService,
-  ) {     }
+    public translate: TranslateService
+  ) {    this.translate.addLangs(['es', 'en']);  }
 
 
   loginForm: FormGroup;
