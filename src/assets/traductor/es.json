@@ -12,6 +12,51 @@
      "subtitulo": "Aquí puede gestionar los medicamientos y los usuarios"
     },
 
+    "usuermodificarcrear": {
+      "registrar": "Registrar Usuario",
+      "medico": "Medico/Farmaceutico",
+      "nombre": "Nombre",
+      "apellidos": "Apellidos",
+      "num_colegiado": "Numero colegiado",
+      "telefono": "Telefono",
+      "especialidadotros": "Espacialidad/otros",
+      "dni": "DNI",
+      "contrasenya": "Contraseña",
+      "contrasenya2": "Vuelva a escribir la contraseña",
+      "correo": "Correo",
+      "modificar": "Modificar",
+      "registrarbtn": "Register",
+      "volver": "Volver",
+
+      "fnombre": "Falta el nombre",
+      "fapellidos": "Falta el apellido",
+      "fnum_colegiado": "Falta el numero colegiado",
+      "ftelefono": "Falta el telefono",
+      "fespecialidadotros": "Falta el la especialidad/otros",
+      "fdni": "Falta el DNI",
+      "fcontrasenya": "Falta repetir la contraseña",
+      "fcontrasenya2": "Vuelva a escribir la contraseña",
+      "fcorreo": "Falta el email",
+      "fincorrectocorreo": "Email invalido"
+    },
+
+    "medicamodificarcrear": {
+      "registrar": "Registrar Medicamento",
+      "medica": "Medicamiento",
+      "nombre": "Nombre medicamento",
+      "composicion": "Composición",
+      "codigo": "Codigo de barras",
+      "comentario": "Comentario",
+      "modificar": "Modificar",
+      "registrarbtn": "Register",
+      "volver": "Volver",
+
+      "fnombre": "Falta el nombre ",
+      "fcomposicion": "Falta la composicion ",
+      "fcodigo": "Falta el codigo de barras ",
+      "fcomentario": "Falta el comentario "
+    },
+
     "header": {
       "sesion": "Iniciar sesion",
       "inicio": "Inicio",

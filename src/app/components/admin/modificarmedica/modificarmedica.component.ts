@@ -6,6 +6,7 @@ import { AdminService } from '../../../services/admin.service';
 import { Medica } from 'src/app/model/Medica';
 import { updateMedica } from 'src/app/model/updateMedica';
 import { consultarmedicament } from 'src/app/model/consultarmedicament';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -18,7 +19,9 @@ export class ModificarmedicaComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private AdminService: AdminService,
     private router: Router,
-    private routes: ActivatedRoute) { }
+    private routes: ActivatedRoute,
+    public translate: TranslateService)
+    { this.translate.addLangs(['es', 'en']); }
 
     addForm: FormGroup;
     token: any;

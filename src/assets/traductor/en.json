@@ -13,6 +13,51 @@
     "sesion": "Sign off"
    },
 
+   "usuermodificarcrear": {
+    "registrar": "Register User",
+    "medico": "Medical/Pharmacist",
+    "nombre": "Name",
+    "apellidos": "Surnames",
+    "num_colegiado": "Collegiate number",
+    "telefono": "Phone",
+    "especialidadotros": "Spatiality/others",
+    "dni": "DNI",
+    "contrasenya": "Password",
+    "contrasenya2": "Write the password again",
+    "correo": "Email",
+    "modificar": "Modify",
+    "registrarbtn": "Register",
+    "volver": "Return",
+
+    "fnombre": "The name is missing",
+    "fapellidos": "The last name is missing",
+    "fnum_colegiado": "The collegiate number is missing",
+    "ftelefono": "The phone is missing",
+    "fespecialidadotros": "Missing the specialty / others",
+    "fdni": "The DNI is missing",
+    "fcontrasenya": "Missing repeat password",
+    "fcontrasenya2": "Write the password again",
+    "fcorreo": "Email is missing",
+    "fincorrectocorreo": "Invalid email"
+  },
+
+  "medicamodificarcrear": {
+    "registrar": "Register Medication",
+    "medica": "Medication",
+    "nombre": "Name medication",
+    "composicion": "Composition",
+    "codigo": "Barcode",
+    "comentario": "Comment",
+    "modificar": "Modify",
+    "registrarbtn": "Register",
+    "volver": "Return",
+
+    "fnombre": "The name is missing",
+    "fcomposicion": "The composition is missing",
+    "fcodigo": "The barcode is missing",
+    "fcomentario": "The comment is missing"
+  },
+
    "header": {
      "sesion": "Log in",
      "inicio": "Home",

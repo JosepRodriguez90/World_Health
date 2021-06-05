@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { AdminService } from '../../../services/admin.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-crearmedica',
@@ -14,8 +15,9 @@ export class CrearmedicaComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
   private router: Router,
-  private AdminService: AdminService
-  ) { }
+  private AdminService: AdminService,
+  public translate: TranslateService
+  ) {this.translate.addLangs(['es', 'en']); }
 
   addForm: FormGroup;
   token: any;

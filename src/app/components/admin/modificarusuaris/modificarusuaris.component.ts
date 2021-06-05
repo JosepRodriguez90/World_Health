@@ -7,6 +7,7 @@ import { User } from 'src/app/model/User';
 import { updateUsuaris } from 'src/app/model/updateUsuaris';
 import { consultarusuaris } from '../../../model/consultarusuaris';
 import { environment } from 'src/environments/environment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-modificarusuaris',
@@ -18,7 +19,9 @@ export class ModificarusuarisComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,
     private AdminService: AdminService,
     private router: Router,
-    private routes: ActivatedRoute) { }
+    private routes: ActivatedRoute,
+    public translate: TranslateService)
+    { this.translate.addLangs(['es', 'en']); }
 
     addForm: FormGroup;
     token: any;

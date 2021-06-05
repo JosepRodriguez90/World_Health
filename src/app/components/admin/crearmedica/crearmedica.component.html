@@ -4,55 +4,55 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="jumbotron mt-4">
 
-        <h2 class="text-center crearmodificar">Registrar Medicamento</h2>
+        <h2 class="text-center crearmodificar">{{ "medicamodificarcrear.registrar" | translate}}</h2>
 
         <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
           <div class="form-group mt-2 mb-2">
-            <label for="Nombre">Nombre medicamiento:</label>
-            <input formControlName="Nombre" placeholder="Nombre medicamiento" name="Nombre" class="form-control" id="Nombre" [ngClass] = "{'is-invalid': submitted && f.Nombre.errors}">
+            <label for="Nombre">{{ "medicamodificarcrear.nombre" | translate}}:</label>
+            <input formControlName="Nombre" placeholder="{{ 'medicamodificarcrear.nombre' | translate}}" name="Nombre" class="form-control" id="Nombre" [ngClass] = "{'is-invalid': submitted && f.Nombre.errors}">
             <div *ngIf = "submitted && f.Nombre.errors" class="invalid-feedback">
               <div *ngIf = "f.Nombre.errors.required">
-                Falta el nombre
+                {{ "medicamodificarcrear.fnombre" | translate}}
               </div>
             </div>
           </div>
 
           <div class="form-group mt-2 mb-2">
-            <label for="composicion">Composicion:</label>
-            <input formControlName="composicion" placeholder="Composicion" name="composicion" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.composicion.errors}">
+            <label for="composicion">{{ "medicamodificarcrear.composicion" | translate}}:</label>
+            <input formControlName="composicion" placeholder="{{ 'medicamodificarcrear.composicion' | translate}}" name="composicion" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.composicion.errors}">
             <div *ngIf = "submitted && f.composicion.errors" class="invalid-feedback">
               <div *ngIf = "f.composicion.errors.required">
-                Falta la composicion
+                {{ "medicamodificarcrear.fcomposicion" | translate}}
               </div>
             </div>
           </div>
 
           <div class="form-group mt-2 mb-2">
-            <label for="codigo">Codigo de barras:</label>
-            <input formControlName="codigo" placeholder="Codigo de barras" name="codigo" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.codigo.errors}">
+            <label for="codigo">{{ "medicamodificarcrear.codigo" | translate}}:</label>
+            <input formControlName="codigo" placeholder="{{ 'medicamodificarcrear.codigo' | translate}}" name="codigo" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.codigo.errors}">
             <div *ngIf = "submitted && f.codigo.errors" class="invalid-feedback">
               <div *ngIf = "f.codigo.errors.required">
-                Falta el codigo de barras
+                {{ "medicamodificarcrear.fcodigo" | translate}}
               </div>
             </div>
           </div>
 
           <div class="form-group mt-2 mb-2">
-            <label for="comentario">Comentario:</label>
-            <input formControlName="comentarios" placeholder="Comentarios" name="comentarios" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.comentarios.errors}">
+            <label for="comentario">{{ "medicamodificarcrear.comentario" | translate}}:</label>
+            <input formControlName="comentarios" placeholder="{{ 'medicamodificarcrear.comentario' | translate}}" name="comentarios" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.comentarios.errors}">
             <div *ngIf = "submitted && f.comentarios.errors" class="invalid-feedback">
               <div *ngIf = "f.comentarios.errors.required">
-                Falta el comentario
+                {{ "medicamodificarcrear.fcomentario" | translate}}
               </div>
             </div>
           </div>
 
           <div class="text-center">
             <div>
-              <button class="appointment-btn scrollto ml-0 mr-2">Registrar</button>
+              <button class="appointment-btn scrollto ml-0 mr-2">{{ "medicamodificarcrear.registrarbtn" | translate}}</button>
             </div>
             <div class="d-flex justify-content-center mb-4">
-              <a routerLink="../medicamientosComponent" routerLinkActive="active" class="mt-4 text-decoration-none appointment-btn btn-secondary scrollto ml-0">Volver</a>
+              <a routerLink="../medicamientosComponent" routerLinkActive="active" class="mt-4 text-decoration-none appointment-btn btn-secondary scrollto ml-0">{{ "medicamodificarcrear.volver" | translate}}</a>
             </div>
           </div>
 
