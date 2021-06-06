@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `medicaments` (
   `id_medicament` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Id del medicament',
   `composicio` varchar(500) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL COMMENT 'Composicio del medicament',
   `nom` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL COMMENT 'Nom del medicament',
-  `codi_barres` varchar(19) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL COMMENT 'Codi de barres del medicament',
+  `codi_barres` int(100) NOT NULL COMMENT 'Codi de barres del medicament',
   `comentaris` varchar(2000) CHARACTER SET utf32 COLLATE utf32_spanish_ci NOT NULL COMMENT 'Comentari del medicament',
   PRIMARY KEY (`id_medicament`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `arbol` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 CREATE TABLE IF NOT EXISTS `proves` (
-  `id` int(11) NOT NULL
+  `id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -105,22 +105,14 @@ VALUES (
    fructosa, glicerina, ácido láctico, parahidroxibenzoato de metilo (E 218),
    propilenglicol, parahidroxibenzoato de propilo (E 216), hidróxido sódico,
    sacarosa, agua purificada, y sabor naranja.',
-  'ABILIFY solución oral 150ml',
-  '8470006527382',
+  'ABILIFY solucion oral 150ml',
+  2147483000,
   'Vía oral: se deben tomar los comprimidos bucodispersables o
 	la solución oral como una alternativa a los comprimidos en
 	pacientes que tengan dificultad para tragar. El comprimido
 	bucodispersable se debe introducir en la boca, sobre la lengua,
 	donde rápidamente se dispersará con la saliva. Se puede tomar con o sin líquido.
-	Se puede es disolver en agua y beber la suspensión resultante.
-   Vía parenteral:
-   - liberación normal: se administra por vía IM. Con el fin de aumentar
-	la absorción y minimizar la variabilidad, se recomienda realizar la inyección
-	en el deltoides o en el músculo glúteo mayor evitando zonas adiposas.
-   - liberación prolongada: únicamente por vía IM La suspensión se debe inyectar
-	inmediatamente después de ser reconstituida, pero puede conservarse en el vial
-	a una temperatura inferior a 25 ºC durante 4 horas. La suspensión se debe inyectar
-	lentamente en el glúteo o el deltoides, en una única administración.'
+	Se puede es disolver en agua y beber la suspensión resultante.'
 );
 INSERT INTO efectes_secundaris (
   descripcio,
@@ -224,22 +216,14 @@ VALUES (
    fructosa, glicerina, ácido láctico, parahidroxibenzoato de metilo (E 218),
    propilenglicol, parahidroxibenzoato de propilo (E 216), hidróxido sódico,
    sacarosa, agua purificada, y sabor naranja.',
-  'ABILIFY solución oral 480ml',
-  '8470006527399',
+  'ABILIFY solucion oral 480ml',
+  2147483001,
   'Vía oral: se deben tomar los comprimidos bucodispersables o
 	la solución oral como una alternativa a los comprimidos en
 	pacientes que tengan dificultad para tragar. El comprimido
 	bucodispersable se debe introducir en la boca, sobre la lengua,
 	donde rápidamente se dispersará con la saliva. Se puede tomar con o sin líquido.
-	Se puede es disolver en agua y beber la suspensión resultante.
-   Vía parenteral:
-   - liberación normal: se administra por vía IM. Con el fin de aumentar
-	la absorción y minimizar la variabilidad, se recomienda realizar la inyección
-	en el deltoides o en el músculo glúteo mayor evitando zonas adiposas.
-   - liberación prolongada: únicamente por vía IM La suspensión se debe inyectar
-	inmediatamente después de ser reconstituida, pero puede conservarse en el vial
-	a una temperatura inferior a 25 ºC durante 4 horas. La suspensión se debe inyectar
-	lentamente en el glúteo o el deltoides, en una única administración.'
+	Se puede es disolver en agua y beber la suspensión resultante.'
 );
 INSERT INTO efectes_secundaris (
   descripcio,
@@ -342,17 +326,11 @@ VALUES (
    Contenido de la cápsula: crospovidona de tipo A, lactosa monohidrato (ver sección 2, “Odomzo contiene lactosa”), estearato de magnesio, poloxámero 188, sílice coloidal anhidra, laurilsulfato de sodio.
    Cubierta de la cápsula: gelatina, óxido de hierro rojo (E172), dióxido de titanio (E171).
    Tinta de impresión: óxido de hierro negro (E172), propilenglicol (E1520), shellac.',
-  'ODOMZO Cáps. dura 200 mg',
-  '8470007235705',
+  'ODOMZO Caps. dura 200 mg',
+  2147483002,
   'Vía oral. Las cápsulas deben tragarse enteras. No se deben masticar ni triturar.
   No se deben abrir las cápsulas debido al riesgo de teratogenicidad. Tomar como mínimo
-  dos horas después de una comida y al menos una hora antes de la siguiente comida para
-  prevenir el aumento del riesgo de aparición de acontecimientos adversos debidos a una mayor
-  exposición de sonidegib cuando se toma con comidas. Si se producen vómitos durante el
-  curso del tratamiento, no se permite una redosificación del paciente antes de la
-  siguiente dosis prescrita. Si se olvida una dosis, se la debe tomar tan pronto como se
-  dé cuenta, a no ser que hayan transcurrido más de seis horas desde la hora establecida;
-  en este caso, el paciente se debe esperar y tomar la siguiente dosis prescrita.'
+  dos horas después de una comida y al menos una hora antes de la siguiente comida.'
 );
 INSERT INTO efectes_secundaris (
     descripcio,
@@ -459,17 +437,11 @@ VALUES (
    Los demás componentes (excipientes) son: glicerol (E-422), jarabe de maltitol (E-965),
    celulosa microcristalina, goma xantana, ácido cítrico anhidro, citrato sódico, benzoato
    sódico (E-211), polisorbato 80, sacarina sódica, esencia de naranja y agua purificada.',
-  'IBUPROFENO ALDO-UNIÓN Susp. oral 200ml',
-  '8470006534045',
+  'IBUPROFENO ALDO-UNION Susp. oral 200ml',
+  2147483003,
   'Siga exactamente las instrucciones de administración de este medicamento indicadas por su médico o farmacéutico. En caso de duda, consulte  de nuevo a su médico o farmacéutico.
    Se debe utilizar la dosis eficaz más baja durante el menor tiempo necesario para aliviar los síntomas. Si tiene una infección, consulte sin demora a un médico si los síntomas (como fiebre y dolor) persisten o empeoran (ver sección 2).
-   Recuerde tomar su medicamento.
-   Su médico le indicará la duración del tratamiento con Ibuprofeno Aldo-Unión. No suspenda el tratamiento antes, ya que entonces no se obtendrían los resultados esperados. Del mismo modo tampoco emplee este medicamento más tiempo del indicado por su médico.
-   Ibuprofeno Aldo-Unión es una suspensión para la administración por vía oral.
-   Instrucciones de uso:
-   Para una dosificación exacta, el envase contiene una jeringa oral graduada de 5 ml. Primero debe agitar la suspensión, luego el dosificador se introduce en el tapón perforado, se invierte el frasco, se tira del émbolo hasta que el líquido alcance la cantidad prescrita por el médico, se vuelve el frasco a su posición inicial y se retira el dosificador.
-   La jeringa deberá limpiarse y secarse después de cada uso.
-   Si tiene el estómago sensible, tome el medicamento con las comidas.'
+   Recuerde tomar su medicamento.'
 );
 INSERT INTO efectes_secundaris (
     descripcio,
@@ -578,7 +550,7 @@ VALUES (
     El principio activo es 100 microgramos de salbutamol (como salbutamol sulfato) por aplicación.
     Los demás componentes son norflurano (HFA134a).',
   'VENTOLIN Susp. para inhal. 100 mcg/dosis inhalador de 200 dosis',
-  '8470006567067',
+  2147483004,
   'Siga exactamente las instrucciones de administración de este medicamento indicadas por su médico. En caso de duda, consulte de nuevo a su médico o farmacéutico.
     Recuerde usar su medicamento. Su médico le indicará la duración de su tratamiento con Ventolin. No suspenda el tratamiento antes.
     Ventolin 100 microgramos/inhalación suspensión para inhalación en envase a presión produce una fina niebla que debe ser inhalada en los pulmones. Asegúrese que sabe utilizar el inhalador correctamente. Si tiene cualquier problema pregunte a su médico o farmacéutico.'
