@@ -6,6 +6,9 @@ P-afegir els camps que falten de medicaments
 P-que el usuari pugui cambiar els seus camps menos nom,cognoms, dni i numero de colegiat i tobligui a ficar doble contraseña
 V-botons de tornar a tots els subapartats exemple(support, crear o modificar al admin etc)
 PV-Pasar tot a angles
+V-Ficar el boto de contactar i soporte al mig de tot, semblant al footer
+V-Lo mateix amb informacion
+V-Soporte boto de volver
 
 
 ***************FET
