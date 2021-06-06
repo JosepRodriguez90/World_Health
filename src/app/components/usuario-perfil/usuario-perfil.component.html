@@ -30,7 +30,7 @@
                   1.092L19 20.695c.322.9-.72 1.673-1.508 1.119l-4.917-3.12a1 1 0 0 0-1.15 0l-4.917 3.12c-.787.554-1.83-.22-1.508-1.119l1.322-5.603A.968.968 0 0 0 6
                   14l-3.62-3.257C1.64 10.17 2.052 9 2.99 9h5.087a.989.989 0 0 0 .926-.633l2.07-5.734z" stroke="#626262" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </g>
-              </svg>Ranking</h6>
+              </svg>Trembolona</h6>
           </li>
           <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
             <h6><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
@@ -86,7 +86,7 @@
         <div class="card-body">
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Nombre:</h6>
+              <h6 class="mb-0">{{ "usuarios.nombre" | translate}}</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.nom}}
@@ -95,7 +95,7 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Apellidos:</h6>
+              <h6 class="mb-0">{{ "usuarios.apellidos" | translate}}</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.cognom}}
@@ -104,7 +104,7 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Telefono:</h6>
+              <h6 class="mb-0">{{ "usuarios.telefono" | translate}}</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.telefon}}
@@ -113,7 +113,7 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Correo:</h6>
+              <h6 class="mb-0">{{ "usuarios.correo" | translate}}</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.email}}
@@ -122,7 +122,7 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">DNI:</h6>
+              <h6 class="mb-0">{{ "usuarios.dni" | translate}}</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.dni}}
@@ -131,7 +131,7 @@
           <hr>
           <div class="row">
             <div class="col-sm-3">
-              <h6 class="mb-0">Numero de Colegiado:</h6>
+              <h6 class="mb-0">{{ "usuarios.numColegiado" | translate}}</h6>
             </div>
             <div class="col-sm-9 text-secondary">
               {{usuario.num_colegiat}}
@@ -139,12 +139,12 @@
           </div>
           <hr>
           <div class="row">
-            <a class="text-center col-2 mt-2 text-decoration-none appointment-btn scrollto ml-0" [routerLink]="['usuario-perfil']" routerLinkActive="active">Modificar</a>
+            <a class="text-center col-2 mt-2 text-decoration-none appointment-btn scrollto ml-0" [routerLink]="['usuario-perfil']" routerLinkActive="active">{{ "usuarios.modificar" | translate}}</a>
           </div>
         </div>
       </div>
       <div class="d-flex flex-row-reverse">
-        <a class="text-center col-2 mt-2 text-decoration-none btn-warning appointment-btn scrollto ml-0" [routerLink]="['../soporte']" routerLinkActive="active">Soporte Tecnico</a>
+        <a class="text-center col-2 mt-2 text-decoration-none btn-warning appointment-btn scrollto ml-0" [routerLink]="['../soporte']" routerLinkActive="active">{{ "usuarios.soporte" | translate}}</a>
       </div>
     </div>
   </div>

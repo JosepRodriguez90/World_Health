@@ -72,6 +72,22 @@
     "sesion":  "Sign off"
   },
 
+  "info": {
+    "comoUsar": "How to use Health World",
+    "textInfo": "All information to how to use our application in PDF",
+    "abrirPdf": "Open PDF"
+  },
+
+  "medicamentos": {
+    "nombre": "Name: ",
+    "codigoBarras": "Code bar:",
+    "patologia": "Pathology:",
+    "laboratorio": "Laboratori:",
+    "efectoSecundario": "Secondary efects:",
+    "formaFarmaceutica": "Farmaceutical form:",
+    "buscar": "Search"
+  },
+
   "usuarios": {
     "num_colegiado": "Collegiate number",
     "apellido": "Surname",
@@ -79,7 +95,20 @@
     "accion": "Action",
     "registrar": "Register",
     "modificar": "Modify",
-    "borrar": "Delete"
+    "borrar": "Delete",
+    "perfil": "Profile",
+    "informacion": "Information",
+    "buscarMedicamentos": "Search medicine",
+    "ia": "A.I.",
+    "cerrarSesion": "Sign Off",
+    "nombre": "Name:",
+    "apellidos": "Surnames:",
+    "telefono": "Phone:",
+    "correo": "Email:",
+    "dni": "DNI:",
+    "numColegiado": "Collegiate number:",
+    "modificar": "Modify",
+    "soporte": "Technic Support"
   },
 
   "medicamientos": {

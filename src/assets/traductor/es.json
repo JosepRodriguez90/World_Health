@@ -71,6 +71,22 @@
       "sesion":  "Cerrar Sesion"
     },
 
+    "info": {
+      "comoUsar": "Como usar Health World",
+      "textInfo": "Toda la informacion para usar nuestra pagina en un PDF",
+      "abrirPdf": "Abrir PDF"
+    },
+
+    "medicamentos": {
+      "nombre": "Nombre: ",
+      "codigoBarras": "Codigo de barras:",
+      "patologia": "Patologia:",
+      "laboratorio": "Laboratorio:",
+      "efectoSecundario": "Efecto secundario:",
+      "formaFarmaceutica": "Forma farmaceutica:",
+      "buscar": "Buscar"
+    },
+
     "usuarios": {
       "num_colegiado": "Número colegiado",
       "apellido": "Apellido",
@@ -78,7 +94,20 @@
       "accion": "Acción",
       "registrar": "Registrar",
       "modificar": "Modificar",
-      "borrar": "Borrar"
+      "borrar": "Borrar",
+      "perfil": "Perfil",
+      "informacion": "Informacion",
+      "buscarMedicamentos": "Buscar Medicamentos",
+      "ia": "I.A.",
+      "cerrarSesion": "Cerrar Sesion",
+      "nombre": "Nombre:",
+      "apellidos": "Apellidos:",
+      "telefono": "Telefono:",
+      "correo": "Correo:",
+      "dni": "DNI:",
+      "numColegiado": "Numero de colegiado:",
+      "modificar": "Modificar",
+      "soporte": "Soporte tecnico"
     },
 
     "medicamientos": {

@@ -5,7 +5,7 @@
     <div class="card col-12">
       <div class="row">
         <div class="col-12">
-          <label>Nombre:</label>
+          <label>{{ "medicamentos.nombre" | translate}}</label>
           <div class="form-group mt-2 mb-2 col-6">
             <input class="form-control" type="text" formControlName="nombre" id="nombre" [ngClass] = "{'is-invalid': (submitted && f.nombre.errors)}">
           </div>
@@ -13,29 +13,29 @@
       </div>
       <div class="row px-2">
         <div class="card col-6 p-4">
-          <label>Codigo de barras:</label>
+          <label>{{ "medicamentos.codigoBarras" | translate}}</label>
           <div class="form-group mt-2 mb-2">
             <input class="form-control" type="number" formControlName="codigo_barras" id="codigo_barras" [ngClass] = "{'is-invalid': (submitted && f.codigo_barras.errors)}">
           </div>
           <hr>
-          <label>Patologia:</label>
+          <label>{{ "medicamentos.patologia" | translate}}</label>
           <div class="form-group mt-2 mb-2">
             <input class="form-control" type="text" formControlName="patologia" id="patologia" [ngClass] = "{'is-invalid': (submitted && f.patologia.errors)}">
           </div>
           <hr>
-          <label>Laboratorio:</label>
+          <label>{{ "medicamentos.laboratorio" | translate}}</label>
           <div class="form-group mt-2 mb-2">
             <input class="form-control" type="text" formControlName="laboratorio" id="laboratorio" [ngClass] = "{'is-invalid': (submitted && f.laboratorio.errors)}">
           </div>
         </div>
 
         <div class="card col-6 p-4">
-          <label>Efecto secundario:</label>
+          <label>{{ "medicamentos.efectoSecundario" | translate}}</label>
           <div class="form-group mt-2 mb-2">
             <input class="form-control" type="text" formControlName="efect_second" id="efect_second" [ngClass] = "{'is-invalid': (submitted && f.efect_second.errors)}">
           </div>
           <hr>
-          <label>Forma farmaceutica:</label>
+          <label>{{ "medicamentos.formaFarmaceutica" | translate}}</label>
           <div class="form-group mt-2 mb-2">
             <input class="form-control" type="text" formControlName="form_farm" id="form_farm" [ngClass] = "{'is-invalid': (submitted && f.form_farm.errors)}">
           </div>
@@ -44,7 +44,7 @@
     </div>
     <div class="form-group row">
       <div class="d-flex justify-content-around">
-        <button type="submit" class="appointment-btn scrollto">Buscar</button>
+        <button type="submit" class="appointment-btn scrollto">{{ "medicamentos.buscar" | translate}}</button>
       </div>
     </div>
   </form>
