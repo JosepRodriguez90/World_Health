@@ -117,7 +117,7 @@ export class BuscadorComponent implements OnInit {
       this.query201 = ", ";
       this.queryWhere = " WHERE ";
       this.query03 = " b.descripcio ";
-      this.query103 = " b.descripcio LIKE '%"+loginData.patologia+"%'";
+      this.query103 = " a.id_medicament IN (SELECT id_medicament FROM patologia WHERE descripcio LIKE '%"+loginData.patologia+"%')";
       this.query203 = " patologia AS B";
       loginData.patologia = "'"+loginData.patologia+"'";
       if((loginData.laboratorio !== "") ||
@@ -133,7 +133,7 @@ export class BuscadorComponent implements OnInit {
       this.query201 = ", ";
       this.queryWhere = " WHERE ";
       this.query04 = " c.nom ";
-      this.query104 = " c.nom LIKE '%"+loginData.laboratorio+"%'";
+      this.query104 = " a.id_medicament IN (SELECT id_medicament FROM laboratori WHERE nom LIKE '%"+loginData.laboratorio+"%')";
       this.query204 = " laboratori AS C";
       loginData.laboratorio = "'"+loginData.laboratorio+"'";
       if((loginData.efect_second !== "") ||
@@ -148,7 +148,7 @@ export class BuscadorComponent implements OnInit {
       this.query201 = ", ";
       this.queryWhere = " WHERE ";
       this.query05 = " d.descripcio ";
-      this.query105 = " d.descripcio LIKE '%"+loginData.efect_second+"%'";
+      this.query105 = " a.id_medicament IN (SELECT id_medicament FROM efectes_secundaris WHERE descripcio LIKE '%"+loginData.efect_second+"%')";
       this.query205 = " efectes_secundaris AS D";
       loginData.efect_second = "'"+loginData.efect_second+"'";
       if(loginData.form_farm !== "") {
@@ -162,7 +162,7 @@ export class BuscadorComponent implements OnInit {
       this.query201 = ", ";
       this.queryWhere = " WHERE ";
       this.query06 = " e.descripcio";
-      this.query106 = " e.descripcio LIKE '%"+loginData.form_farm+"%'";
+      this.query106 = " a.id_medicament IN (SELECT id_medicament FROM forma_farmaceutica WHERE descripcio LIKE '%"+loginData.form_farm+"%')";
       this.query206 = " forma_farmaceutica AS E";
       loginData.form_farm = "'"+loginData.form_farm+"'";
     }
