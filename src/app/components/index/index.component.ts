@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-index',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  constructor(public translate: TranslateService ) {
+    this.translate.addLangs(['es', 'en']);
+        this.translate.setDefaultLang('es');
+  }
 
   ngOnInit(): void {
   }

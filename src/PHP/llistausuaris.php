@@ -27,7 +27,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 
   $x=0;
 
-  $cesta="SELECT id_usuari, nom, cognom, num_colegiat FROM usuari where nom!='admin' ";
+  $cesta="SELECT id_usuari, nom, cognom, num_colegiat FROM usuari where nom!='admin' ORDER BY num_colegiat ";
 
   $resultados=mysqli_query($conexion, $cesta);
 
@@ -44,3 +44,6 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 // echo "<div>" .  $valor. "</div>";
 // echo "<div>" .   $fila['nom'] . "</div>";
 echo json_encode($array);
+
+
+?>

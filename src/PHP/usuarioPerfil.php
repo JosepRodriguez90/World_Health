@@ -37,6 +37,7 @@ if(isset($postdata) && !empty($postdata)) {
   $selectDni = "select dni from usuari where email = '$correu'";
   $selectNumColegiat = "select num_colegiat from usuari where email = '$correu'";
   $selectAltres = "select altres from usuari where email = '$correu'";
+  $selectId = "select id_usuari from usuari where email = '$correu'";
 
   $consultaNom = mysqli_query($con, $selectNom);
   $consultaCognom = mysqli_query($con, $selectCognom);
@@ -45,6 +46,7 @@ if(isset($postdata) && !empty($postdata)) {
   $consultaDni = mysqli_query($con, $selectDni);
   $consultaNumColegiat = mysqli_query($con, $selectNumColegiat);
   $consultaAltres = mysqli_query($con, $selectAltres);
+  $consultaId = mysqli_query($con, $selectId);
 
   $resultadoNom = mysqli_fetch_assoc($consultaNom);
   $resultadoCognom = mysqli_fetch_assoc($consultaCognom);
@@ -53,6 +55,7 @@ if(isset($postdata) && !empty($postdata)) {
   $resultadoDni = mysqli_fetch_assoc($consultaDni);
   $resultadoNumColegiat = mysqli_fetch_assoc($consultaNumColegiat);
   $resultadoAltres = mysqli_fetch_assoc($consultaAltres);
+  $resultadoId = mysqli_fetch_assoc($consultaId);
 
 
   echo json_encode(
@@ -63,7 +66,8 @@ if(isset($postdata) && !empty($postdata)) {
       "email" => $correu,
       "dni" => $resultadoDni["dni"],
       "num_colegiat" => $resultadoNumColegiat["num_colegiat"],
-      "altres" => $resultadoAltres["altres"]
+      "altres" => $resultadoAltres["altres"],
+      "id_usuari" => $resultadoId["id_usuari"]
     )
   );
 }

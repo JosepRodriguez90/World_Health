@@ -4,6 +4,8 @@ import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { AdminService } from '../../../services/admin.service';
 import { consultarusuaris } from '../../../model/consultarusuaris';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-medicos',
@@ -15,8 +17,10 @@ export class MedicosComponent implements OnInit {
   usuarios;
   usu;
 
-  constructor( private AdminService: AdminService,
-    ) { }
+  constructor( public translate: TranslateService,
+    private AdminService: AdminService,
+    private router: Router,
+    ) { this.translate.addLangs(['es', 'en']), this.translate.setDefaultLang('es'); }
 
   ngOnInit(): void {
     this.idusuari = localStorage.getItem('idusuari')
@@ -38,9 +42,29 @@ export class MedicosComponent implements OnInit {
       datos => {
 
         console.log(datos)
+        console.log(item[0])
+        console.log(item[1])
+        console.log(item[2])
         location.reload();
       })
 
   }
+
+  crear(){
+    this.router.navigate(['crearusuariosComponent']);
+  }
+
+
+  modificar(item){
+    console.log(item[0]);
+
+    this.AdminService.createUsuarisupdate(item[0]).subscribe(
+      (data) => {
+        console.log(data);
+        console.log(item);
+    this.router.navigate(['modificarusuarisComponent',item]);
+  });
+
+}
 
 }

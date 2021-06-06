@@ -1,0 +1,170 @@
+{
+
+  "formreactivo": {
+    "faltaemail": "Falta el correo",
+    "nocorreo": "Esto no es un correo electronico",
+    "faltapass": "Falta la contraseña",
+    "passminim3chr": "Contraseña demasiado corta (minimo 3 caracteres)"
+  },
+
+   "adminhome": {
+     "Bienvenido": "Bienvenido Administrador",
+     "subtitulo": "Aquí puede gestionar los medicamientos y los usuarios"
+    },
+
+    "usuermodificarcrear": {
+      "registrar": "Registrar Usuario",
+      "medico": "Medico/Farmaceutico",
+      "nombre": "Nombre",
+      "apellidos": "Apellidos",
+      "num_colegiado": "Numero colegiado",
+      "telefono": "Telefono",
+      "especialidadotros": "Espacialidad/otros",
+      "dni": "DNI",
+      "contrasenya": "Contraseña",
+      "contrasenya2": "Vuelva a escribir la contraseña",
+      "correo": "Correo",
+      "modificar": "Modificar",
+      "registrarbtn": "Register",
+      "volver": "Volver",
+
+      "fnombre": "Falta el nombre",
+      "fapellidos": "Falta el apellido",
+      "fnum_colegiado": "Falta el numero colegiado",
+      "fnum_colegiado_max": "El numero colegiado demasiado largo (max. 9 caracteres)",
+      "ftelefono": "Falta el telefono",
+      "fespecialidadotros": "Falta el la especialidad/otros",
+      "fdni": "Falta el DNI",
+      "fcontrasenya": "Falta repetir la contraseña",
+      "fcontrasenya2": "Vuelva a escribir la contraseña",
+      "fcorreo": "Falta el email",
+      "fincorrectocorreo": "Email invalido"
+    },
+
+    "medicamodificarcrear": {
+      "registrar": "Registrar Medicamento",
+      "medica": "Medicamiento",
+      "nombre": "Nombre medicamento",
+      "composicion": "Composición",
+      "codigo": "Codigo de barras",
+      "comentario": "Comentario",
+      "modificar": "Modificar",
+      "registrarbtn": "Register",
+      "volver": "Volver",
+
+      "fnombre": "Falta el nombre ",
+      "fcomposicion": "Falta la composicion ",
+      "fcodigo": "Falta el codigo de barras ",
+      "fcomentario": "Falta el comentario "
+    },
+
+    "header": {
+      "sesion": "Iniciar sesion",
+      "inicio": "Inicio",
+      "sobre": "Sobre Health World",
+      "contact": "Contactar"
+    },
+
+    "headeradmin": {
+      "usuarios": "Gestionar Usuarios",
+      "medicamientos": "Gestionar Medicamientos",
+      "sesion":  "Cerrar Sesion"
+    },
+
+    "info": {
+      "comoUsar": "Como usar Health World",
+      "textInfo": "Toda la informacion para usar nuestra pagina en un PDF",
+      "abrirPdf": "Abrir PDF"
+    },
+
+    "medicamentos": {
+      "nombre": "Nombre: ",
+      "codigoBarras": "Codigo de barras:",
+      "patologia": "Patologia:",
+      "laboratorio": "Laboratorio:",
+      "efectoSecundario": "Efecto secundario:",
+      "formaFarmaceutica": "Forma farmaceutica:",
+      "buscar": "Buscar"
+    },
+
+    "usuarios": {
+      "num_colegiado": "Número colegiado",
+      "apellido": "Apellido",
+      "nombre": "Nombre",
+      "accion": "Acción",
+      "registrar": "Registrar",
+      "modificar": "Modificar",
+      "borrar": "Borrar",
+      "perfil": "Perfil",
+      "informacion": "Informacion",
+      "buscarMedicamentos": "Buscar Medicamentos",
+      "ia": "I.A.",
+      "cerrarSesion": "Cerrar Sesion",
+      "nombre": "Nombre:",
+      "apellidos": "Apellidos:",
+      "telefono": "Telefono:",
+      "correo": "Correo:",
+      "dni": "DNI:",
+      "numColegiado": "Numero de colegiado:",
+      "modificar": "Modificar",
+      "soporte": "Soporte tecnico"
+    },
+
+    "medicamientos": {
+      "codigo": "Codigo de barras",
+      "nombre": "Nombre",
+      "accion": "Acción",
+      "registrar": "Registrar",
+      "modificar": "Modificar",
+      "borrar": "Borrar"
+    },
+
+    "login": {
+      "sesion": "Iniciar sesion",
+      "correo": "Correo:",
+      "contrasenya": "Contraseña:",
+      "volver": "Volver al Inicio"
+    },
+
+    "index": {
+      "titulo": "Bienvenido a Health World",
+      "subtitulo": "Somos una pagina web para consultar medicamentos",
+      "sobre": "Sobre Nosotros",
+      "descripcio": "Nos queremos diferenciar del resto ofreciendo una experiencia única de busqueda de medicamentos mejorada y comoda con una IA de ultima generación.",
+      "btninfo": "Mas información ",
+      "encontrar": "Encontrar tus medicamentos online",
+      "encontrardesc": "Health World te ayuda a buscar y elegir el mejor medicamento para cada situacion y paciente.",
+      "comentarios": "Comentarios con otros profesionales medicos",
+      "comentariosdesc": "Health World te permite comentar los medicamentos para que otros profesionales puedan ver en que situaciones se han usado.",
+      "guardar": "Guarda tus recetas medicas a favoritos",
+      "guardardesc": "Health World te permite crear una lista de medicamentos mas usados para que esten siempre a tu alcance."
+    },
+
+    "sobrenosotros": {
+      "titulo": "Sobre Health World",
+      "subtitulo": "El proyecto Healthworld se plantea como una herramienta que ofrece a los profesionales de la Salud para poder gestionar búsquedas de medicamentos con una tecnología innovadora dentro del sector. ",
+      "nuestra": "Nuestra marca personal",
+      "nuestradesc": "Gracias al desarrollo de una IA que facilitará realizar búsquedas con diferentes filtros para dar los mejores resultados, junto con una experiencia enriquecedora en la web hacen de Healthworld un buscador de medicamentos único. ",
+      "sobre": "Sobre nosotros",
+      "sobredesc": "Este proyecto se ajusta al espíritu y primordial requisito de la empresa y nuestro equipo de profesionales de desarrollar herramientas y aplicaciones para facilitar la vida a las personas. ",
+      "proyecto": "Nuestro proyecto de futuro en medicamentos",
+      "proyetcodesc": "Esta aplicación web puede llevarnos a desarrollar futuras aplicaciones y herramientas dentro de este sector para cubrir la gran demanda de atención y profesionalidad a través de la tecnología, que en el entorno actual de sociedad ha demostrado ser de gran ayuda. "
+    },
+
+    "contactar": {
+      "titulo":"CONTACTA CON NOSOTROS",
+      "subtitulo": "Quieres mas información? Ponte en contacto con nosotros!",
+      "localizacion": "Localización:",
+      "localizaciondesc": "Complejo de La Caparrella a Lleida, CEEI 3 3.3",
+      "correodesc": "support@healthworld.com",
+      "telefono": "+34 619111225",
+      "correo": "Correo:",
+      "llamanos": "Llamanos:",
+      "enviar": "Enviar",
+      "nombre": "Nombre",
+      "email": "Email",
+      "asunto": "asunto",
+      "mensaje": "Mensaje"
+    }
+
+}

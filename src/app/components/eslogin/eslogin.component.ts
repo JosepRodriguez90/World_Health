@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { ApiResponse } from '../../model/api-response';
 import { environment } from 'src/environments/environment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-eslogin',
@@ -16,8 +17,9 @@ export class EsloginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private apiService: UsuariosService
-  ) { }
+    private apiService: UsuariosService,
+    public translate: TranslateService
+  ) {    this.translate.addLangs(['es', 'en']);  }
 
 
   loginForm: FormGroup;
@@ -58,12 +60,12 @@ export class EsloginComponent implements OnInit {
 
     if (this.loginForm.invalid) {
       this.invalidLogin = true;
-      console.log("Login invalid");
+      console.log("Login invalido");
 
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Les dades no son correctes.',
+        text: 'Los datos no son correctos.',
       })
       return;
     }

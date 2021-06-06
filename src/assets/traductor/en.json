@@ -1,0 +1,175 @@
+{
+
+  "formreactivo": {
+    "faltaemail": "Email is missing",
+    "nocorreo": "This is not an email",
+    "faltapass": "Password is missing",
+    "passminim3chr": "Password to short (minim 3 characters)"
+  },
+
+  "adminhome": {
+    "Bienvenido": "Welcome Administrator",
+    "subtitulo": "Here you can manage medications and users",
+    "sesion": "Sign off"
+   },
+
+   "usuermodificarcrear": {
+    "registrar": "Register User",
+    "medico": "Medical/Pharmacist",
+    "nombre": "Name",
+    "apellidos": "Surnames",
+    "num_colegiado": "Collegiate number",
+    "telefono": "Phone",
+    "especialidadotros": "Spatiality/others",
+    "dni": "DNI",
+    "contrasenya": "Password",
+    "contrasenya2": "Write the password again",
+    "correo": "Email",
+    "modificar": "Modify",
+    "registrarbtn": "Register",
+    "volver": "Return",
+
+    "fnombre": "The name is missing",
+    "fapellidos": "The last name is missing",
+    "fnum_colegiado": "The collegiate number is missing",
+    "fnum_colegiado_max": "The collegiate number is too long (max. 9 chars)",
+    "ftelefono": "The phone is missing",
+    "fespecialidadotros": "Missing the specialty / others",
+    "fdni": "The DNI is missing",
+    "fcontrasenya": "Missing repeat password",
+    "fcontrasenya2": "Write the password again",
+    "fcorreo": "Email is missing",
+    "fincorrectocorreo": "Invalid email"
+  },
+
+  "medicamodificarcrear": {
+    "registrar": "Register Medication",
+    "medica": "Medication",
+    "nombre": "Name medication",
+    "composicion": "Composition",
+    "codigo": "Barcode",
+    "comentario": "Comment",
+    "modificar": "Modify",
+    "registrarbtn": "Register",
+    "volver": "Return",
+
+    "fnombre": "The name is missing",
+    "fcomposicion": "The composition is missing",
+    "fcodigo": "The barcode is missing",
+    "fcomentario": "The comment is missing"
+  },
+
+   "header": {
+     "sesion": "Log in",
+     "inicio": "Home",
+     "sobre": "About Health World",
+     "contact": "Contact"
+   },
+
+   "headeradmin": {
+    "usuarios": "Manage Users",
+    "medicamientos": "Manage Medications",
+    "sesion":  "Sign off"
+  },
+
+  "info": {
+    "comoUsar": "How to use Health World",
+    "textInfo": "All information to how to use our application in PDF",
+    "abrirPdf": "Open PDF"
+  },
+
+  "medicamentos": {
+    "nombre": "Name: ",
+    "codigoBarras": "Code bar:",
+    "patologia": "Pathology:",
+    "laboratorio": "Laboratori:",
+    "efectoSecundario": "Secondary efects:",
+    "formaFarmaceutica": "Farmaceutical form:",
+    "buscar": "Search"
+  },
+
+  "usuarios": {
+    "num_colegiado": "Collegiate number",
+    "apellido": "Surname",
+    "nombre": "Name",
+    "accion": "Action",
+    "registrar": "Register",
+    "modificar": "Modify",
+    "borrar": "Delete",
+    "perfil": "Profile",
+    "informacion": "Information",
+    "buscarMedicamentos": "Search medicine",
+    "ia": "A.I.",
+    "cerrarSesion": "Sign Off",
+    "nombre": "Name:",
+    "apellidos": "Surnames:",
+    "telefono": "Phone:",
+    "correo": "Email:",
+    "dni": "DNI:",
+    "numColegiado": "Collegiate number:",
+    "modificar": "Modify",
+    "soporte": "Technic Support"
+  },
+
+  "medicamientos": {
+    "codigo": "Barcode",
+    "nombre": "Name",
+    "accion": "Action",
+    "registrar": "Register",
+    "modificar": "Modify",
+    "borrar": "Delete"
+  },
+
+   "login": {
+    "sesion": "Log in",
+    "correo": "Email:",
+    "contrasenya": "Password:",
+    "volver": "Back to Home"
+  },
+
+   "index": {
+    "titulo": "Welcome to health World",
+    "subtitulo": "We are a website to consult medications",
+    "sobre": "About us",
+    "descripcio": "We want to be different from the rest by offering a unique experience in a upgraded and easy medical search with a state-of-the-art A.I.",
+    "btninfo": "More information ",
+    "encontrar": "Search your medication online",
+    "encontrardesc": "Health World helps you to search and find the best medication for every kind of situation and patient.",
+    "comentarios": "Commentary with other professional doctors",
+    "comentariosdesc": "Health World te permite comentar los medicamentos para que otros profesionales puedan ver en que situaciones se han usado.",
+    "guardar": "Save all your medical recipes",
+    "guardardesc": "Health World allows you to create lists with all of your most searched medications so that they are always at hand."
+  },
+
+  "sobrenosotros": {
+    "titulo": "About Health World",
+    "subtitulo": "The Healthworld project is proposed as a tool that offers Health professionals to be able to manage drug searches with innovative technology within the sector.  ",
+    "nuestra": "Our personal brand",
+    "nuestradesc": "Thanks to the development of an AI that will facilitate searches with different filters to give the best results, along with an enriching experience on the web make Healthworld a unique drug finder. ",
+    "sobre": "About us",
+    "sobredesc": "This project conforms to the spirit and primary requirement of the company and our team of professionals to develop tools and applications to make life easier for people. ",
+    "proyecto": "Our future project in medicines",
+    "proyetcodesc": "This web application can lead us to develop future applications and tools within this sector to meet the great demand for attention and professionalism through technology, which in today's society environment has proven to be of great help. "
+  },
+
+  "contactar": {
+    "titulo":"CONTACT US",
+    "subtitulo": "Do you want more information? Get in touch with us!",
+    "localizacion": "Location:",
+    "localizaciondesc": "Complejo de La Caparrella a Lleida, CEEI 3 3.3",
+    "correodesc": "support@healthworld.com",
+    "telefono": "+34 619768410",
+    "correo": "Email:",
+    "llamanos": "Call us:",
+    "enviar": "Send",
+    "nombre": "Name",
+    "email": "Email",
+    "asunto": "Subject",
+    "mensaje": "Message"
+  }
+
+
+}
+
+
+

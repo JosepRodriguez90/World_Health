@@ -6,6 +6,7 @@ export class Usuarios {
     public email?: string,
     public dni?: string,
     public num_colegiat?: number,
-    public altres?: string
+    public altres?: string,
+    public id_usuari?: number
   ){}
 }

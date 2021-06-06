@@ -1,9 +1,5 @@
 <?php
 
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Headers: Origin, x-Requested-With, Content-Type, Accept");
-header('Content-Type: application/json');
-
 class BD{
   private $db_host = "localhost";
   private $db_user = "root";

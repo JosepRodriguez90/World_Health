@@ -27,13 +27,14 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 
   $x=0;
 
-  $cesta="SELECT nom, codi_barres FROM medicaments";
+  $cesta="SELECT id_medicament, nom, codi_barres FROM medicaments ORDER BY codi_barres";
 
   $resultados=mysqli_query($conexion, $cesta);
 
   while ($valores = mysqli_fetch_array($resultados)) {
     $array[$x][0]=$valores[0];
     $array[$x][1]=$valores[1];
+    $array[$x][2]=$valores[2];
 
     $x++;
 
@@ -43,3 +44,5 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 // echo "<div>" .  $valor. "</div>";
 // echo "<div>" .   $fila['nom'] . "</div>";
 echo json_encode($array);
+
+?>

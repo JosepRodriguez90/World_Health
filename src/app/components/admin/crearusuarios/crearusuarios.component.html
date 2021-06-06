@@ -1,0 +1,114 @@
+<app-adminheader></app-adminheader>
+<div class="row">
+  <div class="col-md-3"></div>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="jumbotron mt-4">
+
+        <h2 class="text-center crearmodificar">{{ "usuermodificarcrear.registrar" | translate}}</h2>
+
+        <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+          <div class="form-group mt-2 mb-2">
+            <label for="firstName">{{ "usuermodificarcrear.nombre" | translate}}:</label>
+            <input formControlName="firstName" placeholder="{{ 'usuermodificarcrear.nombre' | translate}}" name="firstName" class="form-control" id="firstName" [ngClass] = "{'is-invalid': submitted && f.firstName.errors}">
+            <div *ngIf = "submitted && f.firstName.errors" class="invalid-feedback">
+              <div *ngIf = "f.firstName.errors.required">
+                {{ "usuermodificarcrear.fnombre" | translate}}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <label for="lastName">{{ "usuermodificarcrear.apellidos" | translate}}:</label>
+            <input formControlName="lastName" placeholder="{{ 'usuermodificarcrear.apellidos' | translate}}" name="lastName" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.lastName.errors}">
+            <div *ngIf = "submitted && f.lastName.errors" class="invalid-feedback">
+              <div *ngIf = "f.lastName.errors.required">
+                {{ "usuermodificarcrear.fapellidos" | translate}}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <label for="telefon">{{ "usuermodificarcrear.telefono" | translate}}:</label>
+            <input formControlName="telefon" placeholder="{{ 'usuermodificarcrear.telefono' | translate}}" name="telefon" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.telefon.errors}">
+            <div *ngIf = "submitted && f.telefon.errors" class="invalid-feedback">
+              <div *ngIf = "f.telefon.errors.required">
+                {{ "usuermodificarcrear.ftelefono" | translate}}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <label for="dni">{{ "usuermodificarcrear.dni" | translate}}:</label>
+            <input formControlName="dni" placeholder="{{ 'usuermodificarcrear.dni' | translate}}" name="dni" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.dni.errors}">
+            <div *ngIf = "submitted && f.dni.errors" class="invalid-feedback">
+              <div *ngIf = "f.dni.errors.required">
+                {{ "usuermodificarcrear.fdni" | translate}}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <label for="numero_colegiado">{{ "usuermodificarcrear.num_colegiado" | translate}}:</label>
+            <input formControlName="numero_colegiado" placeholder="{{ 'usuermodificarcrear.num_colegiado' | translate}}" name="numero_colegiado" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.numero_colegiado.errors}">
+            <div *ngIf = "submitted && f.numero_colegiado.errors" class="invalid-feedback">
+              <div *ngIf = "f.numero_colegiado.errors.required">
+                {{ "usuermodificarcrear.fnum_colegiado" | translate}}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <label for="especialidad/otros">{{ "usuermodificarcrear.especialidadotros" | translate}}:</label>
+            <input formControlName="especialidad" placeholder="{{ 'usuermodificarcrear.especialidadotros' | translate}}" name="especialidad" class="form-control" id="lastName" [ngClass] = "{'is-invalid': submitted && f.especialidad.errors}">
+            <div *ngIf = "submitted && f.especialidad.errors" class="invalid-feedback">
+              <div *ngIf = "f.especialidad.errors.required">
+                {{ "usuermodificarcrear.especialidadotros" | translate}}
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <label for="password">{{ "usuermodificarcrear.contrasenya" | translate}}:</label>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" placeholder="{{ 'usuermodificarcrear.contrasenya' | translate}}" formControlName="password" id="password" [ngClass] = "{'is-invalid': submitted && f.password.errors}" autocomplete="off">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)="mostrarContrasena()"><svg id=clickme width=19 height=16 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M569.354 231.631C512.97 135.949 407.81 72 288 72 168.14 72 63.004 135.994 6.646 231.631a47.999 47.999 0 0 0 0 48.739C63.031 376.051 168.19 440 288 440c119.86 0 224.996-63.994 281.354-159.631a47.997 47.997 0 0 0 0-48.738zM288 392c-102.556 0-192.091-54.701-240-136 44.157-74.933 123.677-127.27 216.162-135.007C273.958 131.078 280 144.83 280 160c0 30.928-25.072 56-56 56s-56-25.072-56-56l.001-.042C157.794 179.043 152 200.844 152 224c0 75.111 60.889 136 136 136s136-60.889 136-136c0-31.031-10.4-59.629-27.895-82.515C451.704 164.638 498.009 205.106 528 256c-47.908 81.299-137.444 136-240 136z"/></svg></button>
+              </div>
+              <div *ngIf = "submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf = "f.password.errors.required">
+                  {{ "usuermodificarcrear.contrasenya" | translate}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group mt-2 mb-2">
+            <label for="email">{{ "usuermodificarcrear.correo" | translate}}:</label>
+            <input type="email" formControlName="email" placeholder="{{ 'usuermodificarcrear.correo' | translate}}" name="email" class="form-control" id="email" [ngClass] = "{'is-invalid': submitted && f.email.errors}">
+            <div *ngIf = "submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf = "f.email.errors.required">
+                {{ "usuermodificarcrear.fcorreo" | translate}}
+              </div>
+            </div>
+            <div *ngIf = "submitted && f.email.errors" class="invalid-feedback">
+              <div *ngIf = "f.email.errors.email">
+                {{ "usuermodificarcrear.fincorrectocorreo" | translate}}
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <div>
+              <button class="appointment-btn scrollto ml-0 mr-2">{{ "usuermodificarcrear.registrarbtn" | translate}}</button>
+            </div>
+            <div class="d-flex justify-content-center mb-4">
+              <a routerLink="../medicosComponent" routerLinkActive="active" class="mt-4 text-decoration-none appointment-btn btn-secondary scrollto ml-0">{{ "usuermodificarcrear.volver" | translate}}</a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<app-footer></app-footer>

@@ -1,39 +1,42 @@
 <app-adminheader></app-adminheader>
-<div class="banner text-left">
+<div class="banner text-left mt-4">
   <div class="row justify-content-center">
-      <div class="col-auto">
-          <table class="table table-responsive">
+      <div class="col-6">
+          <table class="table table-responsive table-hover">
 
               <thead>
-                  <tr class="text-center">
-                      <th scope="col">Nombre</th>
-                      <th scope="col">Apellido</th>
-                      <th scope="col">numero colegiado</th>
-                      <th scope="col">Modificar</th>
-                      <th scope="col">Borrar</th>
+                  <tr class="text-center table-primary">
+                      <th scope="col">{{ "usuarios.num_colegiado" | translate}}</th>
+                      <th scope="col">{{ "usuarios.apellido" | translate}}</th>
+                      <th scope="col">{{ "usuarios.nombre" | translate}}</th>
+                      <th scope="col">{{ "usuarios.accion" | translate}}</th>
                   </tr>
               </thead>
               <tbody  *ngFor="let item of usuarios">
-                  <tr>
-                      <td><b>{{item[1]}}</b></td>
-                      <td><b>{{item[2]}}</b></td>
+                  <tr class="text-center">
                       <td><b>{{item[3]}}</b></td>
+                      <td><b>{{item[2]}}</b></td>
+                      <td><b>{{item[1]}}</b></td>
+
                       <td>
-                          <button class="btn btn-opacity-warning mr-3">
-              Modificar
-            </button>
+                        <button class="btn btn-opacity-warning mr-3" (click)="modificar(item)">
+                          {{ "usuarios.modificar" | translate}}
+                        </button>
+                        <button class="btn btn-opacity-danger" (click)="eliminar(item)">
+                          {{ "usuarios.borrar" | translate}}
+                        </button>
                       </td>
 
 
-                      <td>
-                          <button class="btn btn-opacity-danger" (click)="eliminar(item)">
-              Borrar
-            </button>
-                      </td>
 
                   </tr>
               </tbody>
           </table>
+
+            <button class="appointment-btn scrollto ml-0 mr-2" (click)="crear()">
+              {{ "usuarios.registrar" | translate}}
+            </button>
+
       </div>
   </div>
 </div>

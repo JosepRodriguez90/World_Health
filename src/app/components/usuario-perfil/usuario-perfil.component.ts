@@ -4,6 +4,9 @@ import { ApiResponse } from '../../model/api-response';
 import { Router } from '@angular/router';
 import { Usuarios } from '../../model/usuarios';
 import { environment } from 'src/environments/environment';
+import { AdminService } from '../../services/admin.service';
+import { updateUsuaris } from 'src/app/model/updateUsuaris';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-usuario-perfil',
@@ -16,8 +19,10 @@ export class UsuarioPerfilComponent implements OnInit {
 
   constructor(
     private apiService: UsuariosService,
-    private router : Router
-  ) { }
+    private AdminService: AdminService,
+    private router : Router,
+    public translate: TranslateService
+  ) { this.translate.addLangs(['es', 'en']), this.translate.setDefaultLang('es'); }
 
   ngOnInit(): void {
     this.usuario = new Usuarios();
