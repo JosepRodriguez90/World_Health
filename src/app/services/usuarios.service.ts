@@ -29,6 +29,11 @@ export class UsuariosService {
     return this.http.post(this.baseUrl + 'buscarIdMedicamento.php', JSON.stringify(query));
   }
 
+  mostrarMedicamento(id): Observable<any> {
+    console.log("entre al service de mostrar medicamento");
+    return this.http.post(this.baseUrl + 'mostrarMedicament.php', JSON.stringify(id));
+  }
+
 
 
 

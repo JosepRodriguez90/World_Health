@@ -20,6 +20,7 @@ import { SoporteComponent } from './components/soporte/soporte.component';
 import { InformacioComponent } from './components/informacio/informacio.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { InteligenciaComponent } from './components/inteligencia/inteligencia.component';
+import { MedicamentComponent } from './components/medicament/medicament.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'informacio', component: InformacioComponent},
   { path: 'buscador', component: BuscadorComponent},
   { path: 'inteligencia', component: InteligenciaComponent},
+  { path: 'medicament', component: MedicamentComponent},
   { path: '**', redirectTo: 'error404'},
 ];
 

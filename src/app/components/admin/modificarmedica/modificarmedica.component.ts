@@ -81,16 +81,25 @@ export class ModificarmedicaComponent implements OnInit {
           (data) => {
             console.log(data);
 
+            if(data.resultat == false){
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Este codigo de barras ya existe.',
+              })
+              return;
+            }
 
+            else if(data.resultat == true) {
               Swal.fire({
                 icon: 'success',
-                title: 'Se ha modificado correctamente',
+                title: 'Se ha modificado correctamente.',
                 showConfirmButton: false,
                 timer: 1500
               }).then((result) => {
                 this.router.navigate(['medicamientosComponent']);
               });
-
+            }
 
           }
         );

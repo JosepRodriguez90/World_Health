@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 import { TranslateService } from '@ngx-translate/core';
 import { Usuarios } from 'src/app/model/usuarios';
 import { medicamentoId } from 'src/app/model/medicamentoId';
+import { consultarmedicament } from 'src/app/model/consultarmedicament';
 
 @Component({
   selector: 'app-buscador',
@@ -197,6 +198,10 @@ export class BuscadorComponent implements OnInit {
       this.ngOnInit();
 
     })
-
+  }
+  Consultar(item: any): void {
+    console.log(item[0]);
+    environment.idMedicament = item[0];
+    this.router.navigate(['medicament']);
   }
 }

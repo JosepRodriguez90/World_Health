@@ -13,7 +13,7 @@ $conexion = mysqli_connect($db_host, $db_user, $db_password, $db_name) or die(my
 
 if (!$conexion)
 {
-    die("No se ha podido realizar la corrección ERROR:" . mysqli_connect_error() . "<br>");
+    die("No se ha podido realizar la correcciÃ³n ERROR:" . mysqli_connect_error() . "<br>");
 }
 else
 {
@@ -23,6 +23,7 @@ else
 // Get the posted data.
 
 $postdata = file_get_contents("php://input");
+$entrar = true;
 
 //print_r($postdata);
 
@@ -38,6 +39,17 @@ if(isset($postdata) && !empty($postdata))
   $codi_barres = mysqli_real_escape_string($conexion, trim($request->codigo));  // ""
   $comentaris = mysqli_real_escape_string($conexion, trim($request->comentarios));  // ""
 
+
+  $userExistSelect = "select count(*) as cuantosmedica from medicaments where codi_barres = '$codi_barres'";
+  $consultaUserExistSelect = mysqli_query($conexion, $userExistSelect);
+  $resultadoUserExistSelect = mysqli_fetch_assoc($consultaUserExistSelect);
+
+  if($resultadoUserExistSelect['cuantosmedica'] == 1){
+    $entrar = false;
+  }
+
+
+  if($entrar == true){
 
   $inserta="SELECT id FROM proves";
 
@@ -62,14 +74,15 @@ if(isset($postdata) && !empty($postdata))
 
 
 
-  echo json_encode(array("result" => true));
-
-  if(mysqli_query($conexion, $sql))
-  {
-    http_response_code(204);
+  if(mysqli_query($conexion,$sql)){
+    http_response_code(201); //obte el codi de resposta.
   }
-  else
-  {
-    // return http_response_code(422);
+  else{
+    http_response_code(422);
   }
+  echo json_encode(array("resultat" => true));
+}
+else{
+  echo json_encode(array("message" => "Error al registrar, el medicamento ya existe", "resultat" => false));
+}
 }

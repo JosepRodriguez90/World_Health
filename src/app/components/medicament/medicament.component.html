@@ -1,0 +1,52 @@
+<app-usuario-header></app-usuario-header>
+<div class="container">
+  <div class="card col-12">
+    <div class="row">
+      <h4><strong>Nombre:</strong></h4>
+      <p>{{this.nomMed}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <h4><strong>Codigo de barras:</strong></h4>
+      <p>{{this.codi}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <h4><strong>Composicion:</strong></h4>
+      <p>{{this.compo}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <h4><strong>Comentarios:</strong></h4>
+      <p>{{this.comen}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <h4><strong>Efectos secundarios:</strong></h4>
+      <p>{{this.efect}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <h4><strong>Nombre del laboratorio:</strong></h4>
+      <p>{{this.nomlab}}</p>
+    </div>
+    <div class="row">
+      <h4><strong>Direccion del laboratorio:</strong></h4>
+      <p>{{this.dirlab}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <h4><strong>Efectos secundarios:</strong></h4>
+      <p>{{this.nomMed}}</p>
+    </div>
+    <hr>
+    <div class="row">
+      <h4><strong>Simptomatologia:</strong></h4>
+      <p>{{this.simp}}</p>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mb-4">
+    <a routerLink="../buscador" routerLinkActive="active" class="mt-4 text-decoration-none appointment-btn btn-secondary scrollto ml-0">{{ "medicamodificarcrear.volver" | translate}}</a>
+  </div>
+</div>
+<app-footer></app-footer>
