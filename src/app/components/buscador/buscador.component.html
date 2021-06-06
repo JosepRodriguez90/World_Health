@@ -15,7 +15,7 @@
         <div class="card col-6 p-4">
           <label>Codigo de barras:</label>
           <div class="form-group mt-2 mb-2">
-            <input class="form-control" type="text" formControlName="codigo_barras" id="codigo_barras" [ngClass] = "{'is-invalid': (submitted && f.codigo_barras.errors)}">
+            <input class="form-control" type="number" formControlName="codigo_barras" id="codigo_barras" [ngClass] = "{'is-invalid': (submitted && f.codigo_barras.errors)}">
           </div>
           <hr>
           <label>Patologia:</label>

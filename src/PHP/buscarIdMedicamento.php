@@ -12,13 +12,18 @@ $con = $BDcon->conexio();
 
 if(isset($postdata) && !empty($postdata)) {
 
+  $array[0][0] = 0;
+  $array[0][1] = "";
+  $array[0][2] = 0;
+
   $x=0;
 
   $query = json_decode($postdata);
 
-  $select = "SELECT id_medicament, nom, codi_barres FROM medicaments WHERE nom IN $query ORDER BY codi_barres";
+  $select = "SELECT id_medicament, nom, codi_barres FROM medicaments WHERE id_medicament IN $query";
 
   $consulta = mysqli_query($con, $select);
+
 
   while ($valores = mysqli_fetch_array($consulta)) {
     $array[$x][0]=$valores[0];
@@ -28,8 +33,9 @@ if(isset($postdata) && !empty($postdata)) {
     $x++;
 
   }
-
   echo json_encode($array);
+
+
 
 
 }
