@@ -3,12 +3,14 @@
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Headers: Origin, x-Requested-With, Content-Type, Accept');
 header('Content-Type: application/json');
+header("Content-Type: text/html;charset=utf-8");
 
 require 'BD.php';
 
 $postdata = file_get_contents("php://input");
 $BDcon = new BD();
 $con = $BDcon->conexio();
+$con->set_charset("utf8");
 
 if(isset($postdata) && !empty($postdata)) {
 

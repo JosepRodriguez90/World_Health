@@ -115,22 +115,25 @@ export class ModificarusuarisComponent implements OnInit {
         (data) => {
           console.log(data);
 
+          if(data.resultat == false){
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: 'Este numero de colegiado ya existe.',
+            })
+            return;
+          }
 
+          else if(data.resultat == true) {
             Swal.fire({
               icon: 'success',
-              title: 'Se ha modificado correctamente',
+              title: 'Se ha registrado correctamente',
               showConfirmButton: false,
               timer: 1500
             }).then((result) => {
-              if(this.correo=="admin@admin.com"){
-                this.router.navigate(['medicosComponent']);
-              }
-              else{
-                this.router.navigate(['../../usuario-perfil']);
-              }
-
+              this.router.navigate(['medicosComponent']);
             });
-
+          }
 
         }
       );

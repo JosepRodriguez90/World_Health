@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   correu: "",
-  apiUrl: 'http://localhost'
+  apiUrl: 'http://localhost',
+  idMedicament: 0
 };
 
 /*

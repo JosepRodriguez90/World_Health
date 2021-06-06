@@ -13,7 +13,7 @@ $conexion = mysqli_connect($db_host, $db_user, $db_password, $db_name) or die(my
 
 if (!$conexion)
 {
-    die("No se ha podido realizar la corrección ERROR:" . mysqli_connect_error() . "<br>");
+    die("No se ha podido realizar la correcciÃ³n ERROR:" . mysqli_connect_error() . "<br>");
 }
 else
 {
@@ -23,7 +23,7 @@ else
 // Get the posted data.
 
 $postdata = file_get_contents("php://input");
-
+$entrar = true;
 //print_r($postdata);
 
 if(isset($postdata) && !empty($postdata))
@@ -33,6 +33,7 @@ if(isset($postdata) && !empty($postdata))
   // Extract the data.
   $request = json_decode($postdata);
 
+  $id = mysqli_real_escape_string($conexion, trim($request->id));
   $password = mysqli_real_escape_string($conexion, trim($request->password));   //guarda  del request el username a la nova variable $username.
   $firstname = mysqli_real_escape_string($conexion, trim($request->firstName));  // "
   $lastname = mysqli_real_escape_string($conexion, trim($request->lastName));  // "
@@ -42,6 +43,9 @@ if(isset($postdata) && !empty($postdata))
   $num_colegiat = mysqli_real_escape_string($conexion, trim($request->numero_colegiado));  // "
   $especialidad = mysqli_real_escape_string($conexion, trim($request->especialidad));  // "
 
+  $userExistSelect = "select count(*) as cuantos from usuari where num_colegiat = '$num_colegiat'"; //busca l'usuari existeix.
+  $consultaUserExistSelect = mysqli_query($conexion, $userExistSelect);
+  $resultadoUserExistSelect = mysqli_fetch_assoc($consultaUserExistSelect);
 
   $inserta="SELECT id FROM proves";
 
@@ -51,6 +55,12 @@ if(isset($postdata) && !empty($postdata))
   $final=$resultadoid['id'];
 
 
+  if($resultadoUserExistSelect['cuantos'] == 1){  //si el resultat es 1 voldra dir que ja existeix l'usuari.
+    $entrar = false;
+  }
+
+  if($entrar == true){ //si es true fa el insert i afegeix l'usuari.
+    // Store.
 
   // Update.
    $sql = "UPDATE `usuari` SET
@@ -69,15 +79,15 @@ if(isset($postdata) && !empty($postdata))
   $resultados1=mysqli_query($conexion, $delete);
 
 
-
-  echo json_encode(array("result" => true));
-
-  if(mysqli_query($conexion, $sql))
-  {
-    http_response_code(204);
+  if(mysqli_query($conexion,$sql)){
+    http_response_code(201); //obte el codi de resposta.
   }
-  else
-  {
-    // return http_response_code(422);
+  else{
+    http_response_code(422);
   }
+  echo json_encode(array("resultat" => true));
+}
+else{
+  echo json_encode(array("message" => "Error al registrar, el usuario ya existe", "resultat" => false));
+}
 }
