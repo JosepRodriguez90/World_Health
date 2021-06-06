@@ -21,7 +21,7 @@ export class BuscadorComponent implements OnInit {
     private router: Router,
     private apiService: UsuariosService,
     public translate: TranslateService
-  ) {    this.translate.addLangs(['es', 'en']);  }
+  ) {    this.translate.addLangs(['es', 'en']), this.translate.setDefaultLang('es');  }
 
   searchForm: FormGroup;
   invalidLogin: boolean = false;

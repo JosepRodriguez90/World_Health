@@ -46,7 +46,7 @@ export class ModificarusuarisComponent implements OnInit {
       lastName: ['', Validators.required],
       telefon: ['', Validators.required],
       dni: ['', Validators.required],
-      numero_colegiado: ['', Validators.required],
+      numero_colegiado: ['', [Validators.required, Validators.maxLength(9)]],
       especialidad: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]]
     });

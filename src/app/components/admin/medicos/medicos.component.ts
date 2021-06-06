@@ -20,7 +20,7 @@ export class MedicosComponent implements OnInit {
   constructor( public translate: TranslateService,
     private AdminService: AdminService,
     private router: Router,
-    ) { this.translate.addLangs(['es', 'en']) }
+    ) { this.translate.addLangs(['es', 'en']), this.translate.setDefaultLang('es'); }
 
   ngOnInit(): void {
     this.idusuari = localStorage.getItem('idusuari')

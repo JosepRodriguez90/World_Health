@@ -61,7 +61,7 @@
 
             </div>
             <hr>
-            <div class="row" *ngIf="this.correo=='admin@admin.com'">
+            <div class="row">
               <div class="col-sm-12">
                 <h6 class="mb-0">{{ "usuermodificarcrear.num_colegiado" | translate}}:</h6>
               </div>
@@ -73,12 +73,15 @@
                   <div *ngIf = "f.numero_colegiado.errors.required">
                     {{ "usuermodificarcrear.fnum_colegiado" | translate}}
                   </div>
+                  <div *ngIf = "f.numero_colegiado.errors.maxlength">
+                    {{ "usuermodificarcrear.fnum_colegiado_max" | translate}}
+                  </div>
                 </div>
               </div>
 
 
             </div>
-            <hr *ngIf="this.correo=='admin@admin.com'">
+            <hr>
             <div class="row">
               <div class="col-sm-12">
                 <h6 class="mb-0">{{ "usuermodificarcrear.telefono" | translate}}:</h6>
@@ -115,7 +118,7 @@
 
             </div>
             <hr>
-            <div class="row" *ngIf="this.correo=='admin@admin.com'">
+            <div class="row">
               <div class="col-sm-12">
                 <h6 class="mb-0">{{ "usuermodificarcrear.dni" | translate}}:</h6>
               </div>
@@ -131,7 +134,7 @@
 
 
             </div>
-            <hr *ngIf="this.correo=='admin@admin.com'">
+            <hr>
             <div class="row">
               <div class="col-sm-12">
                 <h6 class="mb-0">{{ "usuermodificarcrear.contrasenya" | translate}}:</h6>
@@ -153,7 +156,7 @@
 
 
             </div>
-            <hr *ngIf="this.correo=='admin@admin.com'">
+            <hr>
             <div class="row">
               <div class="col-sm-12">
                 <h6 class="mb-0">{{ "usuermodificarcrear.contrasenya2" | translate}}:</h6>

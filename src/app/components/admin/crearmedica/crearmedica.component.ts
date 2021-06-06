@@ -57,7 +57,16 @@ onSubmit() {
       (data) => {
         console.log(data);
 
-        if (data) {
+        if(data.resultat == false){
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Este codigo de barras ya existe.',
+          })
+          return;
+        }
+
+        else if(data.resultat == true) {
           Swal.fire({
             icon: 'success',
             title: 'Se ha registrado correctamente',
@@ -65,14 +74,6 @@ onSubmit() {
             timer: 1500
           }).then((result) => {
             this.router.navigate(['medicamientosComponent']);
-          });
-        }
-        else {
-          Swal.fire({
-            icon: 'error',
-            title: data,
-            showConfirmButton: false,
-            timer: 1500
           });
         }
       }

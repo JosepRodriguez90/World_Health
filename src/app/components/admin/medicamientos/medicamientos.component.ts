@@ -22,7 +22,7 @@ export class MedicamientosComponent implements OnInit {
     public translate: TranslateService,
     private AdminService: AdminService,
     private router: Router,
-    ) {  this.translate.addLangs(['es', 'en']); }
+    ) {  this.translate.addLangs(['es', 'en']), this.translate.setDefaultLang('es'); }
 
   ngOnInit(): void {
     this.idmedicament = localStorage.getItem('idmedicament')

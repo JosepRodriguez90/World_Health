@@ -69,7 +69,16 @@ export class CrearusuariosComponent implements OnInit {
         (data) => {
           console.log(data);
 
-          if (data) {
+          if(data.resultat == false){
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: 'Este numero de colegiado ya existe.',
+            })
+            return;
+          }
+
+          else if(data.resultat == true) {
             Swal.fire({
               icon: 'success',
               title: 'Se ha registrado correctamente',
@@ -77,14 +86,6 @@ export class CrearusuariosComponent implements OnInit {
               timer: 1500
             }).then((result) => {
               this.router.navigate(['medicosComponent']);
-            });
-          }
-          else {
-            Swal.fire({
-              icon: 'error',
-              title: data,
-              showConfirmButton: false,
-              timer: 1500
             });
           }
         }

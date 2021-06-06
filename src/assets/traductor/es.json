@@ -31,6 +31,7 @@
       "fnombre": "Falta el nombre",
       "fapellidos": "Falta el apellido",
       "fnum_colegiado": "Falta el numero colegiado",
+      "fnum_colegiado_max": "El numero colegiado demasiado largo (max. 9 caracteres)",
       "ftelefono": "Falta el telefono",
       "fespecialidadotros": "Falta el la especialidad/otros",
       "fdni": "Falta el DNI",

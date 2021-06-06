@@ -78,10 +78,10 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
      else{
        http_response_code(422);
      }
-     echo json_encode(array("result" => true));
+     echo json_encode(array("resultat" => true));
    }
    else{
-     echo json_encode(array("message" => "Error al registrar, el usuario ya existe", "result" => false));
+     echo json_encode(array("message" => "Error al registrar, el usuario ya existe", "resultat" => false));
    }
  }
 

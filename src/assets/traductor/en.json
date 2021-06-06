@@ -32,6 +32,7 @@
     "fnombre": "The name is missing",
     "fapellidos": "The last name is missing",
     "fnum_colegiado": "The collegiate number is missing",
+    "fnum_colegiado_max": "The collegiate number is too long (max. 9 chars)",
     "ftelefono": "The phone is missing",
     "fespecialidadotros": "Missing the specialty / others",
     "fdni": "The DNI is missing",
